@@ -72,6 +72,7 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
 }
 
 .header__title {
@@ -116,4 +117,14 @@ html {
 
 .header__menu-link:hover {
   border-bottom: 3px solid var(--color-primary);
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
+}
+
+.section {
+  max-width: var(--main-width);
 }
