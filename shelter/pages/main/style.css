@@ -15,13 +15,17 @@ html {
   height: 100%;
 
   color: var(--color-dark);
-  background-color: var(--color-dark);
+  background: url(../../assets/img/background-lines.png),
+    linear-gradient(45deg, #5b483a, #262425);
 
   font: normal 20px/2 Georgia, Arial, sans-serif;
 
-  --color-dark: #000;
-  --color-decoration: #bdae82;
-  --color-light: #fff;
+  --color-black: #000;
+  --color-dark-3xl: #292929;
+  --color-dark-l: #545454;
+  --color-dark-s: #cdcdcd;
+  --color-light-xl: #fff;
+  --color-primary: #f1cdb3;
   -webkit-font-smoothing: antialiased;
   grid-template-columns: 1fr;
   justify-items: center;
@@ -36,5 +40,75 @@ html {
   display: grid;
 
   width: 100%;
-  padding: 0 20px;
+  padding: 0 40px;
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.header {
+  height: 180px;
+  align-items: center;
+  justify-content: space-between;
+
+  box-sizing: border-box;
+  max-width: var(--main-width);
+
+  gap: 31px;
+  grid-template-areas: "logo navigation";
+  grid-template-columns: max-content max-content;
+}
+
+.header__logo {
+  grid-area: logo;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header__title {
+  margin: 0;
+  padding: 0;
+  font-size: 32px;
+  font-weight: normal;
+  color: var(--color-primary);
+  line-height: 1.1;
+  letter-spacing: 0.06em;
+}
+
+.header__text {
+  font-family: "Arial";
+  font-size: 13px;
+  line-height: 1.15;
+  margin: 0;
+  letter-spacing: 0.1em;
+  color: var(--color-light-xl);
+}
+
+.header__navigation {
+  grid-area: navigation;
+}
+
+.header__menu {
+  display: flex;
+  gap: 35px;
+}
+
+.header__menu-link {
+  font-family: "Arial";
+  color: var(--color-dark-s);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.header__menu-link.active {
+  border-bottom: 3px solid var(--color-primary);
 }
