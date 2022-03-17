@@ -107,8 +107,13 @@ html {
   color: var(--color-dark-s);
   font-size: 15px;
   line-height: 1.6;
+  transition: border-bottom 0.2s;
 }
 
 .header__menu-link.active {
+  border-bottom: 3px solid var(--color-primary);
+}
+
+.header__menu-link:hover {
   border-bottom: 3px solid var(--color-primary);
 }
