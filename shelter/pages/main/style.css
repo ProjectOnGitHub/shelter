@@ -24,6 +24,8 @@ html {
   --color-dark-3xl: #292929;
   --color-dark-l: #545454;
   --color-dark-s: #cdcdcd;
+  --color-light-l: #f6f6f6;
+  --color-light-s: #fafafa;
   --color-light-xl: #fff;
   --color-primary: #f1cdb3;
   -webkit-font-smoothing: antialiased;
@@ -54,6 +56,7 @@ html {
 }
 
 .button {
+  width: 100%;
   cursor: pointer;
   color: var(--color-dark-3xl);
   font-size: 17px;
@@ -62,9 +65,10 @@ html {
   height: 52px;
   max-width: 261px;
   min-height: 52px;
-  border: 1px solid var(--color-primary);
+  border: 2px solid var(--color-primary);
   background-color: var(--color-primary);
   border-radius: 50px;
+  padding: 0;
 }
 
 .text {
@@ -146,6 +150,7 @@ html {
 
 .section {
   box-sizing: border-box;
+  width: 100%;
   padding-top: 80px;
   padding-bottom: 100px;
   display: grid;
@@ -208,9 +213,7 @@ html {
 
 .about {
   background-color: var(--color-light-xl);
-  width: 100%;
   grid-template-columns: 1fr;
-  justify-items: center;
 }
 
 .about__article {
@@ -248,4 +251,63 @@ html {
 
 .about__paragraph {
   margin: 0;
+}
+
+.pets {
+  background-color: var(--color-light-l);
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+
+.pets__title {
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.slider {
+  max-width: var(--main-width);
+  grid-template-columns: min-content 1fr min-content;
+  gap: 53px;
+  box-sizing: border-box;
+  align-items: center;
+}
+
+.slider__button {
+  width: 52px;
+  background-color: var(--color-light-l);
+}
+
+.cards__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 270px);
+  grid-template-rows: repeat(auto-fill, 435px);
+  justify-content: space-between;
+}
+
+.cards__figure {
+  margin: 0;
+}
+.cards__caption {
+  text-align: center;
+  color: var(--color-dark-l);
+  line-height: 1.136;
+  letter-spacing: 0.06em;
+}
+
+.cards__list-item {
+  border-radius: 9px;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  background-color: var(--color-light-s);
+  transition: border 0.2s;
+}
+.cards__list-item:hover {
+  cursor: pointer;
+}
+
+.cards__button {
+  max-width: 187px;
+  background-color: var(--color-light-s);
 }
