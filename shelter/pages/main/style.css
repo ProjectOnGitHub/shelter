@@ -148,9 +148,10 @@ html {
 .start-screen {
   display: flex;
   width: 100%;
+  justify-content: space-between;
 }
 .start-screen__info {
-  margin: 163px 0 0;
+  margin: 163px 0 243px;
   display: flex;
   flex-direction: column;
   gap: 42px;
@@ -178,11 +179,11 @@ html {
 }
 
 .start-screen__image {
-  height: 100%;
-  max-height: 728px;
+  height: auto;
   width: 100%;
-  background: url(../../assets/img/start-screen-puppy.png) no-repeat right;
-  background-size: contain;
+  max-width: 698px;
+  background: url(../../assets/img/start-screen-puppy.png) no-repeat;
+  background-size: cover;
 }
 
 .start-screen__button {
