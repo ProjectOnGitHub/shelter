@@ -125,10 +125,7 @@ html {
 }
 
 .header__menu-link {
-  font-family: "Arial";
   color: var(--color-dark-s);
-  font-size: 15px;
-  line-height: 1.6;
   transition: border-bottom 0.2s;
 }
 
