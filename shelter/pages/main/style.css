@@ -225,6 +225,7 @@ html {
 .about {
   background-color: var(--color-light-xl);
   grid-template-columns: 1fr;
+  justify-items: center;
 }
 
 .about__article {
