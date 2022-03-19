@@ -247,8 +247,6 @@ html {
 
 .about__title {
   grid-area: title;
-  max-width: 370px;
-  width: 100%;
 }
 
 .about__text {
@@ -272,8 +270,6 @@ html {
 }
 
 .pets__title {
-  width: 100%;
-  max-width: 400px;
   text-align: center;
 }
 
@@ -338,5 +334,15 @@ html {
   background-color: var(--color-light-s);
 }
 
-.pets__button {
+.help {
+  background-color: var(--color-light-l);
+  grid-template-columns: 1fr;
+  justify-items: center;
+  gap: 60px;
+}
+
+.help__title {
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
 }
