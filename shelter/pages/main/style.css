@@ -278,9 +278,9 @@ html {
 .slider {
   max-width: var(--main-width);
   grid-template-columns: min-content 1fr min-content;
-  gap: 53px;
   box-sizing: border-box;
   align-items: center;
+  gap: 12px;
 }
 
 .slider__button {
@@ -301,7 +301,10 @@ html {
   display: grid;
   grid-template-columns: repeat(auto-fill, 270px);
   grid-template-rows: repeat(auto-fill, 435px);
-  justify-content: space-between;
+  gap: 40px;
+
+  justify-items: center;
+  justify-content: center;
 }
 
 .cards__list-item {
@@ -311,6 +314,8 @@ html {
   justify-items: center;
   background-color: var(--color-light-s);
   transition: 0.3s ease-in-out;
+  width: 270px;
+  height: 435px;
 }
 .cards__list-item:hover {
   cursor: pointer;
