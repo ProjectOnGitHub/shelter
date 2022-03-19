@@ -337,7 +337,7 @@ html {
 }
 
 .help {
-  background-color: var(--color-light-l);
+  background-color: var(--color-light-xl);
   grid-template-columns: 1fr;
   justify-items: center;
   gap: 60px;
