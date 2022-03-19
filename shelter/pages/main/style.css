@@ -291,16 +291,6 @@ html {
   justify-content: space-between;
 }
 
-.cards__figure {
-  margin: 0;
-}
-.cards__caption {
-  text-align: center;
-  color: var(--color-dark-l);
-  line-height: 1.136;
-  letter-spacing: 0.06em;
-}
-
 .cards__list-item {
   border-radius: 9px;
   display: grid;
@@ -312,6 +302,20 @@ html {
 .cards__list-item:hover {
   cursor: pointer;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.cards__figure {
+  margin: 0;
+}
+.cards__caption {
+  text-align: center;
+  color: var(--color-dark-l);
+  line-height: 1.136;
+  letter-spacing: 0.06em;
+}
+
+.cards__image {
+  margin-bottom: 15px;
 }
 
 .cards__button {
