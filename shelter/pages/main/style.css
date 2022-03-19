@@ -83,6 +83,12 @@ html {
   line-height: 1.6;
 }
 
+.icon {
+  height: 60px;
+  width: 60px;
+  fill: var(--color-primary);
+}
+
 .header {
   height: 180px;
   align-items: center;
@@ -282,6 +288,15 @@ html {
 .slider__button {
   width: 52px;
   background-color: var(--color-light-l);
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+
+.slider__icon {
+  width: 14px;
+  height: 6px;
+  fill: var(--color-dark-3xl);
 }
 
 .cards__list {
