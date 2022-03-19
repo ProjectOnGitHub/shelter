@@ -268,6 +268,7 @@ html {
   background-color: var(--color-light-l);
   grid-template-columns: 1fr;
   justify-items: center;
+  gap: 60px;
 }
 
 .pets__title {
@@ -282,7 +283,6 @@ html {
   gap: 53px;
   box-sizing: border-box;
   align-items: center;
-  margin: 60px 0;
 }
 
 .slider__button {
@@ -336,4 +336,7 @@ html {
 .cards__button {
   max-width: 187px;
   background-color: var(--color-light-s);
+}
+
+.pets__button {
 }
