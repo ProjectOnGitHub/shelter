@@ -38,17 +38,17 @@ html {
   -ms-text-size-adjust: auto;
 }
 
+.list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
 .common-width {
   display: grid;
 
   width: 100%;
   padding: 0 40px;
-}
-
-.list {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
 }
 
 .link {
@@ -345,4 +345,28 @@ html {
   width: 100%;
   max-width: 400px;
   text-align: center;
+}
+
+.help__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 55px 120px;
+  max-width: var(--main-width);
+  box-sizing: border-box;
+  justify-content: center;
+}
+
+.help__list-subtitle {
+  margin: 0;
+  font-weight: normal;
+  color: var(--color-dark-l);
+  font-size: 20px;
+  line-height: 1.15;
+  letter-spacing: 0.06em;
+}
+
+.help__list-item {
+  display: grid;
+  justify-items: center;
+  gap: 30px;
 }
