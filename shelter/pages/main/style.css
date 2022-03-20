@@ -293,7 +293,7 @@ html {
   display: grid;
   grid-template-columns: repeat(auto-fill, 270px);
   grid-template-rows: repeat(auto-fill, 435px);
-  gap: 40px;
+  gap: 90px;
 
   justify-items: center;
   justify-content: center;
