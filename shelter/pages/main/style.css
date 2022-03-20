@@ -166,13 +166,13 @@ html {
   justify-content: center;
 }
 
-.section__title {
+.title {
+  font-weight: normal;
   margin: 0;
   font-size: 35px;
   line-height: 1.3;
   letter-spacing: 0.06em;
   color: var(--color-dark-l);
-  font-weight: normal;
 }
 
 .start-screen {
