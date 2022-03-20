@@ -47,7 +47,7 @@ html {
 
 .common-width {
   display: grid;
-
+  box-sizing: border-box;
   width: 100%;
   padding: 0 40px;
   max-width: var(--main-width);
@@ -95,9 +95,6 @@ html {
   height: 180px;
   align-items: center;
   justify-content: space-between;
-
-  box-sizing: border-box;
-
   gap: 31px;
   grid-template-areas: "logo navigation";
   grid-template-columns: max-content max-content;
@@ -229,7 +226,6 @@ html {
 }
 
 .about__article {
-  box-sizing: border-box;
   grid-template-areas:
     "image title"
     "image text";
@@ -275,7 +271,6 @@ html {
 
 .slider {
   grid-template-columns: min-content 1fr min-content;
-  box-sizing: border-box;
   align-items: center;
   gap: 12px;
 }
@@ -355,7 +350,6 @@ html {
   display: flex;
   flex-wrap: wrap;
   gap: 55px 120px;
-  box-sizing: border-box;
   justify-content: center;
 }
 
@@ -381,7 +375,6 @@ html {
 }
 
 .donation__article {
-  box-sizing: border-box;
   grid-template-areas:
     "image title"
     "image subtitle"
