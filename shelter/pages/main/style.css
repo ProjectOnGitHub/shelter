@@ -91,6 +91,21 @@ html {
   fill: var(--color-primary);
 }
 
+.icon_m {
+  width: 40px;
+  height: 32px;
+}
+
+.icon_sm {
+  width: 30px;
+  height: 23px;
+}
+
+.icon_s {
+  width: 22px;
+  height: 32px;
+}
+
 .header {
   height: 180px;
   align-items: center;
@@ -424,8 +439,6 @@ html {
 
 .donation__icon {
   fill: var(--color-dark-3xl);
-  width: 30px;
-  height: 23px;
 }
 
 .donation__link {
@@ -441,8 +454,59 @@ html {
   max-width: 380px;
   grid-area: text;
   font-family: "Arial";
-  font-style: italic;
+  font-size: italic;
   font-size: 12px;
   line-height: 1.5;
   color: var(--color-dark-m);
+}
+
+.footer {
+  justify-content: space-between;
+  grid-template-columns: repeat(3, max-content);
+}
+
+.footer__contacts {
+  display: grid;
+  height: 234px;
+  align-content: space-between;
+
+  padding-top: 56px;
+  padding-bottom: 60px;
+
+  width: 100%;
+}
+
+.footer__title {
+  color: var(--color-light-xl);
+}
+
+.footer__contacts-list {
+  display: grid;
+  gap: 40px;
+}
+
+.footer__contacts-list-item {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  align-items: center;
+  gap: 20px;
+}
+
+.icon__contacts {
+  display: flex;
+  align-content: center;
+}
+
+.footer__link {
+  line-height: 1.15;
+  letter-spacing: 0.06em;
+  color: var(--color-primary);
+}
+
+.footer__image {
+  width: 300px;
+  height: 310px;
+  background: url(../../assets/img/footer-puppy.png) no-repeat;
+  background-size: cover;
+  align-self: end;
 }
