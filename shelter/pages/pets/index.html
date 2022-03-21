@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../pages/main/style.css" />
+    <title>Cozy House -</title>
+  </head>
+  <body>
+    <div class="root">
+      <header class="header common-width">
+        <div class="header__logo">
+          <h1 class="header__title">Cozy House</h1>
+          <p class="header__text">Shelter for pets in Boston</p>
+        </div>
+        <nav class="header__navigation">
+          <ul class="text header__menu list">
+            <li class="header__menu-item">
+              <a href="../main" class="header__menu-link link active"
+                >About the shelters</a
+              >
+            </li>
+            <li class="header__menu-item">
+              <a href="../pets" class="header__menu-link link">Our pets</a>
+            </li>
+            <li class="header__menu-item">
+              <a href="../main/#help" class="header__menu-link link"
+                >Help the shelter</a
+              >
+            </li>
+            <li class="header__menu-item">
+              <a href="#contacts" class="header__menu-link link">Contacts</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main class="main">
+        <section id="pets" class="section pets">
+          <h3 class="title pets__title">
+            Our friends who <br />
+            are looking for a house
+          </h3>
+          <div class="slider common-width">
+            <button class="button slider__button slider__button_prev">
+              <svg class="icon slider__icon">
+                <use xlink:href="../../assets/svg/sprite.svg#arrow-left"></use>
+              </svg>
+            </button>
+            <ul class="list cards__list">
+              <li class="cards__list-item">
+                <figure class="cards__figure">
+                  <img
+                    src="../../assets/img/pets-katrine.png"
+                    alt="Katrine"
+                    class="cards__image"
+                  />
+                  <figcaption class="cards__caption">Katrine</figcaption>
+                </figure>
+                <button class="button cards__button">Learn more</button>
+              </li>
+              <li class="cards__list-item">
+                <figure class="cards__figure">
+                  <img
+                    src="../../assets/img/pets-jennifer.png"
+                    alt="Katrine"
+                    class="cards__image"
+                  />
+                  <figcaption class="cards__caption">Jennifer</figcaption>
+                </figure>
+                <button class="button cards__button">Learn more</button>
+              </li>
+              <li class="cards__list-item">
+                <figure class="cards__figure">
+                  <img
+                    src="../../assets/img/pets-woody.png"
+                    alt="Katrine"
+                    class="cards__image"
+                  />
+                  <figcaption class="cards__caption">Woddy</figcaption>
+                </figure>
+                <button class="button cards__button">Learn more</button>
+              </li>
+            </ul>
+            <button class="button slider__button slider__button_next">
+              <svg class="icon slider__icon">
+                <use xlink:href="../../assets/svg/sprite.svg#arrow-right"></use>
+              </svg>
+            </button>
+          </div>
+        </section>
+      </main>
+      <footer id="contacts" class="footer common-width">
+        <div class="footer__contacts">
+          <h3 class="title footer__title">
+            For questions <br />and suggestions
+          </h3>
+          <ul class="list footer__contacts-list">
+            <li class="footer__contacts-list-item">
+              <svg class="icon icon_m icon__contacts">
+                <use xlink:href="../../assets/svg/sprite.svg#icon-email"></use>
+              </svg>
+              <a href="mailto:email@shelter.com" class="link footer__link">
+                email@shelter.com
+              </a>
+            </li>
+            <li class="footer__contacts-list-item">
+              <svg class="icon icon_m icon__contacts">
+                <use xlink:href="../../assets/svg/sprite.svg#phone"></use>
+              </svg>
+              <a href="tel:+13 674 567 75 54" class="link footer__link">
+                +13 674 567 75 54
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__contacts">
+          <h3 class="title footer__title">
+            We are waiting<br />
+            for your visit
+          </h3>
+          <ul class="list footer__contacts-list">
+            <li class="footer__contacts-list-item">
+              <svg class="icon icon_s icon__contacts">
+                <use xlink:href="../../assets/svg/sprite.svg#icon-marker"></use>
+              </svg>
+              <a
+                href="https://goo.gl/maps/uodc8cuoKiwvjzgn6"
+                target="_blank"
+                class="link footer__link"
+              >
+                1 Central Street, Boston<br />(entrance from the store)
+              </a>
+            </li>
+            <li class="footer__contacts-list-item">
+              <svg class="icon icon_s icon__contacts">
+                <use xlink:href="../../assets/svg/sprite.svg#icon-marker"></use>
+              </svg>
+              <a
+                href="https://goo.gl/maps/f2JbSjubkoUCJFwt9"
+                target="_blank"
+                class="link footer__link"
+              >
+                18 South Park, London
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__image"></div>
+      </footer>
+    </div>
+    <script src="../../pages/main/script.js"></script>
+  </body>
+</html>
