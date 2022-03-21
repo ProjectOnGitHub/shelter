@@ -441,6 +441,7 @@ html {
   max-width: 349px;
   background-color: var(--color-primary);
   border-radius: 9px;
+  transition: 0.3s ease-in-out;
 }
 
 .donation__icon {
@@ -450,8 +451,9 @@ html {
 .donation__link {
   color: var(--color-dark-3xl);
 }
-.donation__link:hover {
-  text-decoration: underline;
+
+.donation__number:hover {
+  transform: scale(1.1);
 }
 
 .donation__text {
