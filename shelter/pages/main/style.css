@@ -424,6 +424,7 @@ html {
 }
 
 .donation__number {
+  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
