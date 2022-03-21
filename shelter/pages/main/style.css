@@ -29,6 +29,7 @@ html {
   --color-light-s: #fafafa;
   --color-light-xl: #fff;
   --color-primary: #f1cdb3;
+  --color-primary-light: #fddcc4;
   -webkit-font-smoothing: antialiased;
   grid-template-columns: 1fr;
   justify-items: center;
@@ -78,6 +79,8 @@ html {
 
 .button:hover {
   transform: scale(1.1);
+  background-color: var(--color-primary-light);
+  border-color: var(--color-primary-light);
 }
 
 .text {
