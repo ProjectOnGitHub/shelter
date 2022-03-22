@@ -1,2 +1,16 @@
 .header_light {
+  background-color: var(--color-light-xl);
+  height: 120px;
+}
+
+.header__title_light {
+  color: var(--color-dark-l);
+}
+
+.header__text_light {
+  color: var(--color-dark-3xl);
+}
+
+.header__menu-link_light {
+  color: var(--color-dark-3xl);
 }
