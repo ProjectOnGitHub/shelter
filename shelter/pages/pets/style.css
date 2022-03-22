@@ -25,3 +25,10 @@
   display: flex;
   gap: 20px;
 }
+
+.cards__list_full {
+  gap: 30px 40px;
+  width: 100%;
+  justify-items: center;
+  justify-content: space-between;
+}
