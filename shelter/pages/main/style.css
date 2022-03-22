@@ -15,7 +15,7 @@ html {
   height: 100%;
 
   color: var(--color-dark);
-  background: url(../../assets/img/background-lines.png),
+  background: url(../../assets/images/background-lines.png),
     linear-gradient(45deg, #5b483a, #262425);
 
   font: normal 20px/2 Georgia, Arial, sans-serif;
@@ -237,7 +237,7 @@ html {
   height: auto;
   width: 100%;
   max-width: 698px;
-  background: url(../../assets/img/start-screen-puppy.png) no-repeat;
+  background: url(../../assets/images/start-screen-puppy.png) no-repeat;
   background-size: cover;
 }
 
@@ -529,7 +529,7 @@ html {
 .footer__image {
   width: 300px;
   height: 310px;
-  background: url(../../assets/img/footer-puppy.png) no-repeat;
+  background: url(../../assets/images/footer-puppy.png) no-repeat;
   background-size: cover;
   align-self: end;
 }
