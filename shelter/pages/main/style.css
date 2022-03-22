@@ -309,6 +309,15 @@ html {
   align-content: center;
 }
 
+.slider__button_disabled {
+  color: var(--color-dark-s);
+  border-color: var(--color-dark-s);
+}
+
+.slider__button_active {
+  background-color: var(--color-primary);
+}
+
 .slider__icon {
   width: 14px;
   height: 6px;
@@ -320,7 +329,7 @@ html {
   grid-template-columns: repeat(auto-fill, 270px);
   grid-template-rows: repeat(auto-fill, 435px);
   gap: 90px;
-
+  width: 100%;
   justify-items: center;
   justify-content: center;
 }

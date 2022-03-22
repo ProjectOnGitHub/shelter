@@ -58,12 +58,7 @@
             Our friends who <br />
             are looking for a house
           </h3>
-          <div class="slider common-width">
-            <button class="button slider__button slider__button_prev">
-              <svg class="icon slider__icon">
-                <use xlink:href="../../assets/svg/sprite.svg#arrow-left"></use>
-              </svg>
-            </button>
+          <div class="slider slider_full common-width">
             <ul class="list cards__list">
               <li class="cards__list-item">
                 <figure class="cards__figure">
@@ -99,11 +94,37 @@
                 <button class="button cards__button">Learn more</button>
               </li>
             </ul>
-            <button class="button slider__button slider__button_next">
-              <svg class="icon slider__icon">
-                <use xlink:href="../../assets/svg/sprite.svg#arrow-right"></use>
-              </svg>
-            </button>
+            <ul class="list slider__pagination">
+              <li class="slider__pagination-item">
+                <button
+                  class="button slider__button slider__button_prev slider__button_disabled"
+                >
+                  &lt;&lt;
+                </button>
+              </li>
+              <li class="slider__pagination-item">
+                <button
+                  class="button slider__button slider__button_prev slider__button_disabled"
+                >
+                  &lt;
+                </button>
+              </li>
+              <li class="slider__pagination-item">
+                <button class="button slider__button slider__button_active">
+                  1
+                </button>
+              </li>
+              <li class="slider__pagination-item">
+                <button class="button slider__button slider__button_next">
+                  &gt;
+                </button>
+              </li>
+              <li class="slider__pagination-item">
+                <button class="button slider__button slider__button_next">
+                  &gt;&gt;
+                </button>
+              </li>
+            </ul>
           </div>
         </section>
       </main>
