@@ -346,12 +346,14 @@ html {
 }
 .cards__list-item:hover {
   cursor: pointer;
+  background-color: var(--color-light-xl);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .cards__figure {
   margin: 0;
 }
+
 .cards__caption {
   text-align: center;
   color: var(--color-dark-l);
