@@ -168,7 +168,7 @@ html {
   transition: border-bottom 0.2s;
 }
 
-.header__menu-link.active {
+.header__menu-link_active {
   border-bottom: 3px solid var(--color-primary);
 }
 
