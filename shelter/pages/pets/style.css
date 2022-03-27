@@ -12,6 +12,10 @@
 }
 
 .header__menu-link_light {
+  color: var(--color-dark-l);
+}
+
+.header__menu-link_light:hover {
   color: var(--color-dark-3xl);
 }
 

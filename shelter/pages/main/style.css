@@ -165,15 +165,16 @@ html {
 
 .header__menu-link {
   color: var(--color-dark-s);
-  transition: border-bottom 0.2s;
+  transition: color 0.2s;
 }
 
 .header__menu-link_active {
   border-bottom: 3px solid var(--color-primary);
+  color: var(--color-light-s);
 }
 
 .header__menu-link:hover {
-  border-bottom: 3px solid var(--color-primary);
+  color: var(--color-light-s);
 }
 
 .main {
