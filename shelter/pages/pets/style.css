@@ -1,6 +1,7 @@
 .header_light {
-  background-color: var(--color-light-xl);
   height: 120px;
+
+  background-color: var(--color-light-xl);
 }
 
 .header__title_light {
@@ -20,19 +21,22 @@
 }
 
 .slider_full {
+  gap: 60px;
   grid-template-columns: 1fr;
   justify-items: center;
-  gap: 60px;
 }
 
 .slider__pagination {
   display: flex;
+
   gap: 20px;
 }
 
 .cards__list_full {
-  gap: 30px 40px;
-  width: 100%;
-  justify-items: center;
   justify-content: space-between;
+
+  width: 100%;
+
+  gap: 30px 40px;
+  justify-items: center;
 }
