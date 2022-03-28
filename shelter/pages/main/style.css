@@ -57,6 +57,7 @@ html {
 
 .button {
   width: 100%;
+  box-sizing: border-box;
   cursor: pointer;
   color: var(--color-dark-3xl);
   height: 52px;
