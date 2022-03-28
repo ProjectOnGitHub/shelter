@@ -120,7 +120,6 @@ html {
   display: grid;
 
   width: 100%;
-  height: 180px;
 
   justify-items: center;
 }
@@ -128,6 +127,7 @@ html {
 .header__container {
   align-items: center;
   justify-content: space-between;
+  height: 180px;
 
   gap: 31px;
   grid-template-areas: "logo navigation";
@@ -136,10 +136,13 @@ html {
 
 @media screen and (max-width: 768px) {
   .header__container {
+    height: 120px;
+
     padding-left: 30px;
     padding-right: 30px;
   }
 }
+
 @media screen and (max-width: 576px) {
   .header__container {
     padding-left: 65px;
@@ -333,6 +336,12 @@ html {
   width: 100%;
   padding-top: 0;
   padding-bottom: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .start-screen {
+    padding-top: 30px;
+  }
 }
 
 .start-screen__info {
