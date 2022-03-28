@@ -1,6 +1,3 @@
-@import url("../../assets/normalize.css");
-@import url("../../assets/fonts.css");
-
 /* Common styles */
 
 html {
@@ -200,6 +197,7 @@ html {
   line-height: 1.3;
   letter-spacing: 0.06em;
   color: var(--color-dark-l);
+  white-space: pre;
 }
 
 .start-screen {
