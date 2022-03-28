@@ -134,6 +134,31 @@ html {
   grid-template-columns: max-content 1fr;
 }
 
+@media screen and (max-width: 768px) {
+  .header__container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .header__container {
+    padding-left: 65px;
+    padding-right: 50px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .header__container {
+    padding-left: 35px;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .header__container {
+    padding-left: 10px;
+  }
+}
+
 .header__logo {
   display: flex;
   align-items: center;
@@ -143,6 +168,8 @@ html {
   height: 60px;
 
   grid-area: logo;
+
+  z-index: 3;
 }
 
 .header__title {
