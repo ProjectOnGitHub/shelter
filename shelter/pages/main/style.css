@@ -294,6 +294,7 @@ html {
 .header__menu-link_active {
   color: var(--color-light-s);
   border-bottom: 3px solid var(--color-primary);
+  padding-bottom: 5px;
 }
 
 .header__menu-link:hover {
