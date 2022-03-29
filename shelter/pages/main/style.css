@@ -205,7 +205,7 @@ html {
 
 .header__menu {
   display: flex;
-
+  font: normal normal 15px/1.6 "Arial", sans-serif;
   gap: 35px;
 }
 
@@ -215,7 +215,7 @@ html {
 
 @media screen and (max-width: 767px) {
   .header__menu {
-    font-size: 24px;
+    font-size: 32px;
     gap: 40px;
     align-items: center;
     align-content: center;
