@@ -53,6 +53,13 @@ html {
   padding: 0 40px;
 }
 
+@media screen and (max-width: 1080px) {
+  .common-width {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
 .link {
   text-decoration: none;
 }
@@ -134,12 +141,9 @@ html {
   grid-template-columns: max-content 1fr;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1080px) {
   .header__container {
     height: 120px;
-
-    padding-left: 30px;
-    padding-right: 30px;
   }
 }
 
@@ -339,9 +343,13 @@ html {
   padding-bottom: 0;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1080px) {
   .start-screen {
     padding-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 100px;
   }
 }
 
@@ -352,10 +360,16 @@ html {
   width: 100%;
   max-width: 460px;
   height: 100%;
-  max-height: 322px;
-  margin: 163px 0 243px;
+  margin-top: 163px;
 
   gap: 42px;
+}
+
+@media screen and (max-width: 1200px) {
+  .start-screen__info {
+    margin: 0;
+    justify-content: center;
+  }
 }
 
 .start-screen__title {
@@ -372,16 +386,29 @@ html {
 }
 
 .start-screen__image {
-  width: 100%;
-  max-width: 698px;
-  height: auto;
+  width: 698px;
+  height: 728px;
 
   background: url(../../assets/images/start-screen-puppy.png) no-repeat;
   background-size: cover;
 }
 
+@media screen and (max-width: 1200px) {
+  .start-screen__image {
+    width: 569px;
+    height: 593px;
+    justify-self: right;
+  }
+}
+
 .start-screen__button {
   max-width: 207px;
+}
+
+@media screen and (max-width: 1080px) {
+  .start-screen__button {
+    align-self: center;
+  }
 }
 
 .about {
