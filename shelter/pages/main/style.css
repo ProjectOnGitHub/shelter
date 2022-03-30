@@ -404,7 +404,6 @@ html {
 }
 
 .start-screen__title {
-  max-width: 310px;
   margin: 0;
 
   color: var(--color-light-xl);
@@ -415,7 +414,6 @@ html {
 @media screen and (max-width: 576px) {
   .start-screen__title {
     font-size: 25px;
-    max-width: 220px;
     text-align: center;
     letter-spacing: 0.06em;
   }
