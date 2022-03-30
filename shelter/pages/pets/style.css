@@ -87,6 +87,12 @@
   }
 }
 
+@media screen and (max-width: 639px) {
+  .cards__list-item_light_hidden_640 {
+    display: none;
+  }
+}
+
 .slider__pagination {
   display: flex;
 
