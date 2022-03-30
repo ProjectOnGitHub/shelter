@@ -1,7 +1,9 @@
 .header_light {
-  height: 120px;
-
   background-color: var(--color-light-xl);
+}
+
+.header__container_light {
+  height: 120px;
 }
 
 .header__title_light {
