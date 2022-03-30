@@ -646,6 +646,12 @@ html {
   justify-items: center;
 }
 
+@media screen and (max-width: 960px) {
+  .cards__list {
+    gap: 30px 40px;
+  }
+}
+
 .cards__list-item {
   display: grid;
 
@@ -660,11 +666,18 @@ html {
   grid-template-columns: 1fr;
   justify-items: center;
 }
+
 .cards__list-item:hover {
   cursor: pointer;
 
   background-color: var(--color-light-xl);
   box-shadow: 0 2px 35px rgba(13, 13, 13, 0.04);
+}
+
+@media screen and (max-width: 1198px) {
+  .cards__list-item_hidden {
+    display: none;
+  }
 }
 
 .cards__figure {
