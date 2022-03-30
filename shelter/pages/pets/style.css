@@ -54,6 +54,14 @@
   }
 }
 
+@media screen and (max-width: 576px) {
+  .pets_light {
+    padding-top: 42px;
+    padding-bottom: 42px;
+    gap: 42px;
+  }
+}
+
 .slider_full {
   gap: 45px;
   grid-template-columns: 1fr;
@@ -63,6 +71,13 @@
 @media screen and (max-width: 960px) {
   .slider_full {
     gap: 40px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .slider_full {
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
 
@@ -76,6 +91,12 @@
   display: flex;
 
   gap: 20px;
+}
+
+@media screen and (max-width: 576px) {
+  .slider__pagination {
+    gap: 10px;
+  }
 }
 
 .cards__list_full {
