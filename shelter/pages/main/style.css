@@ -719,7 +719,7 @@ html {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .cards__list-item_hidden_768 {
     display: none;
   }
@@ -763,6 +763,14 @@ html {
   }
 }
 
+@media screen and (max-width: 576px) {
+  .help {
+    gap: 42px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
 .help__title {
   width: 100%;
   max-width: 400px;
@@ -778,16 +786,29 @@ html {
   gap: 55px 120px;
 }
 
-@media screen and (max-width: 1200px) {
-  .help__list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
 @media screen and (max-width: 960px) {
   .help__list {
     gap: 55px 60px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .help__list {
+    gap: 30px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .help__list {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .help__list {
+    justify-content: space-between;
+    max-width: 350px;
   }
 }
 
@@ -812,6 +833,27 @@ html {
   .help__list-item {
     width: 170px;
     height: 113px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .help__list-item {
+    width: 130px;
+    height: 87px;
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .help__icon {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .help__list-subtitle {
+    font-size: 15px;
   }
 }
 
