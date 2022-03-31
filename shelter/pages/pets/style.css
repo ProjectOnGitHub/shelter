@@ -64,8 +64,11 @@
 
 .slider_full {
   gap: 45px;
-  grid-template-columns: 1fr;
+  grid-template-areas:
+    "list"
+    "pagination";
   justify-items: center;
+  grid-template-columns: 1fr;
 }
 
 @media screen and (max-width: 960px) {
@@ -94,6 +97,7 @@
 }
 
 .slider__pagination {
+  grid-area: pagination;
   display: flex;
 
   gap: 20px;
@@ -107,7 +111,7 @@
 
 .cards__list_full {
   width: 100%;
-
+  grid-area: list;
   gap: 30px 40px;
   justify-items: center;
 }
