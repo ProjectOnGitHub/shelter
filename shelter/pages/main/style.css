@@ -756,6 +756,13 @@ html {
   justify-items: center;
 }
 
+@media screen and (max-width: 960px) {
+  .help {
+    padding-left: 39px;
+    padding-right: 39px;
+  }
+}
+
 .help__title {
   width: 100%;
   max-width: 400px;
@@ -769,6 +776,19 @@ html {
   justify-content: center;
 
   gap: 55px 120px;
+}
+
+@media screen and (max-width: 1200px) {
+  .help__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .help__list {
+    gap: 55px 60px;
+  }
 }
 
 .help__list-subtitle {
@@ -786,6 +806,13 @@ html {
 
   gap: 30px;
   justify-items: center;
+}
+
+@media screen and (max-width: 960px) {
+  .help__list-item {
+    width: 170px;
+    height: 113px;
+  }
 }
 
 .donation {
