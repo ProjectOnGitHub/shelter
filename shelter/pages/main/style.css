@@ -867,25 +867,39 @@ html {
 .donation__article {
   align-items: center;
   justify-content: center;
+  grid-template-areas: "image info ";
 
-  gap: 20px 30px;
-  grid-template-areas:
-    "image title"
-    "image subtitle"
-    "image number"
-    "image text";
+  gap: 30px;
+}
+
+@media screen and (max-width: 960px) {
+  .donation__article {
+    grid-template-areas:
+      "info"
+      "image";
+    gap: 60px;
+    justify-items: center;
+  }
+}
+
+.donation__info {
+  display: grid;
+  grid-area: info;
+  gap: 20px;
+  grid-template-columns: 1fr;
+}
+
+@media screen and (max-width: 960px) {
+  .donation__info {
+    max-width: 380px;
+  }
 }
 
 .donation__image {
+  grid-area: image;
   width: 100%;
   max-width: 505px;
   height: auto;
-
-  grid-area: image;
-}
-
-.donation__title {
-  grid-area: title;
 }
 
 .donation__subtitle {
@@ -896,8 +910,6 @@ html {
   color: var(--color-dark-l);
 
   font: normal normal 15px/1.1 "Georgia", serif;
-
-  grid-area: subtitle;
 }
 
 .donation__number {
@@ -919,7 +931,6 @@ html {
   font: normal normal 20px/1.15 "Georgia", serif;
 
   gap: 12px;
-  grid-area: number;
 }
 
 .donation__icon {
@@ -942,8 +953,6 @@ html {
   color: var(--color-dark-m);
 
   font: italic normal 12px/1.5 "Arial", sans-serif;
-
-  grid-area: text;
 }
 
 .footer {
