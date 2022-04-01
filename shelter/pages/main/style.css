@@ -653,6 +653,7 @@ html {
 .slider__button_disabled {
   color: var(--color-dark-s);
   border-color: var(--color-dark-s);
+  pointer-events: none;
 }
 
 .slider__button_active {
