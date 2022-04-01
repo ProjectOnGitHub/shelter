@@ -885,7 +885,6 @@ html {
   }
 }
 
-
 .donation__info {
   display: grid;
   grid-area: info;
@@ -913,7 +912,6 @@ html {
   }
 }
 
-
 .donation__image {
   grid-area: image;
   width: 100%;
@@ -927,7 +925,6 @@ html {
     max-width: 260px;
   }
 }
-
 
 .donation__subtitle {
   margin: 0;
@@ -1004,17 +1001,32 @@ html {
 .footer {
   justify-content: space-between;
 
-  grid-template-columns: repeat(3, max-content);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px 65px;
+}
+
+@media screen and (max-width: 1100px) {
+  .footer {
+    justify-content: center;
+  }
 }
 
 .footer__contacts {
   display: grid;
   align-content: space-between;
 
-  width: 100%;
   height: 234px;
   padding-top: 56px;
   padding-bottom: 60px;
+}
+
+@media screen and (max-width: 1100px) {
+  .footer__contacts {
+    justify-content: center;
+    padding-top: 30px;
+    padding-bottom: 0;
+  }
 }
 
 .footer__title {
