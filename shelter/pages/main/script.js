@@ -3,8 +3,8 @@ const menuButton = document.querySelector('.header__menu-button');
 
 const toggleMenuButton = () => {
   menu.classList.toggle('header__menu_opened');
-  menuButton.classList.contains('header__menu-button_light')
-    ? menuButton.classList.toggle('header__menu-button_light_opened')
+  menuButton.classList.contains('header__menu-button_theme_light')
+    ? menuButton.classList.toggle('header__menu-button_theme_light_opened')
     : menuButton.classList.toggle('header__menu-button_opened');
 };
 
