@@ -1004,11 +1004,21 @@ html {
   display: flex;
   flex-wrap: wrap;
   gap: 60px 65px;
+  padding-top: 56px;
 }
 
 @media screen and (max-width: 1100px) {
   .footer {
     justify-content: center;
+    padding-top: 30px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .footer {
+    gap: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
 
@@ -1017,20 +1027,33 @@ html {
   align-content: space-between;
 
   height: 234px;
-  padding-top: 56px;
-  padding-bottom: 60px;
 }
 
 @media screen and (max-width: 1100px) {
   .footer__contacts {
     justify-content: center;
-    padding-top: 30px;
     padding-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .footer__contacts {
+    gap: 40px;
+    height: auto;
+    justify-items: center;
   }
 }
 
 .footer__title {
   color: var(--color-light-xl);
+  max-width: 13ch;
+  width: 100%;
+}
+
+@media screen and (max-width: 576px) {
+  .footer__title {
+    max-width: 15ch;
+  }
 }
 
 .footer__contacts-list {
@@ -1068,4 +1091,11 @@ html {
 
   background: url(../../assets/images/footer-puppy.png) no-repeat;
   background-size: cover;
+}
+
+@media screen and (max-width: 576px) {
+  .footer__image {
+    width: 260px;
+    height: 269px;
+  }
 }
