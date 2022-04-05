@@ -714,6 +714,10 @@ html {
   box-shadow: 0 2px 35px rgba(13, 13, 13, 0.04);
 }
 
+.cards__item:hover ~ .cards__button {
+  background-color: red;
+}
+
 @media screen and (max-width: 1198px) {
   .cards__item_hidden {
     display: none;

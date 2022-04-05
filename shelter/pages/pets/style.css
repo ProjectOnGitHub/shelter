@@ -90,13 +90,13 @@
 }
 
 @media screen and (max-width: 950px) {
-  .cards__list-item_inner-page_hidden {
+  .cards__item_inner-page_hidden {
     display: none;
   }
 }
 
 @media screen and (max-width: 639px) {
-  .cards__item_hidden_640 {
+  .cards__item_inner-page_hidden_640 {
     display: none;
   }
 }
