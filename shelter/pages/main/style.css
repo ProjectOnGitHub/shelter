@@ -667,7 +667,7 @@ html {
   fill: var(--color-dark-3xl);
 }
 
-.cards__list {
+.cards {
   display: grid;
   justify-content: center;
 
@@ -680,19 +680,19 @@ html {
 }
 
 @media screen and (max-width: 960px) {
-  .cards__list {
+  .cards {
     gap: 30px 40px;
   }
 }
 
 @media screen and (max-width: 767px) {
-  .cards__list {
+  .cards {
     grid-area: list;
     grid-template-columns: 1fr;
   }
 }
 
-.cards__list-item {
+.cards__item {
   display: grid;
 
   width: 270px;
@@ -707,7 +707,7 @@ html {
   justify-items: center;
 }
 
-.cards__list-item:hover {
+.cards__item:hover {
   cursor: pointer;
 
   background-color: var(--color-light-xl);
@@ -715,13 +715,13 @@ html {
 }
 
 @media screen and (max-width: 1198px) {
-  .cards__list-item_hidden {
+  .cards__item_hidden {
     display: none;
   }
 }
 
 @media screen and (max-width: 767px) {
-  .cards__list-item_hidden_768 {
+  .cards__item_hidden_768 {
     display: none;
   }
 }

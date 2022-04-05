@@ -96,7 +96,7 @@
 }
 
 @media screen and (max-width: 639px) {
-  .cards__list-item._hidden_640 {
+  .cards__item_hidden_640 {
     display: none;
   }
 }
@@ -114,7 +114,7 @@
   }
 }
 
-.cards__list_inner-page {
+.cards_inner-page {
   width: 100%;
   grid-area: list;
   gap: 30px 40px;
