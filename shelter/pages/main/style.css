@@ -659,6 +659,7 @@ html {
 
 .slider__button_active {
   background-color: var(--color-primary);
+  pointer-events: none;
 }
 
 .slider__icon {
