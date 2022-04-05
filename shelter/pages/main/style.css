@@ -1089,6 +1089,11 @@ html {
   color: var(--color-primary);
 
   line-height: 1.15;
+  transition: 0.3s ease-in-out;
+}
+
+.footer__link:hover {
+  transform: scale(1.05);
 }
 
 .footer__image {
