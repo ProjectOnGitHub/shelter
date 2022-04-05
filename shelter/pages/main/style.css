@@ -13,7 +13,8 @@ html {
 
   color: var(--color-dark);
   background: url(../../assets/images/background-lines.png),
-    linear-gradient(45deg, #5b483a, #262425);
+    radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%),
+    linear-gradient(0deg, #211f20, #211f20);
 
   font: normal 20px/2 "Georgia", serif;
 
