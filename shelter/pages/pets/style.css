@@ -89,6 +89,13 @@
   }
 }
 
+.cards_inner-page {
+  width: 100%;
+  grid-area: list;
+  gap: 30px 40px;
+  justify-items: center;
+}
+
 @media screen and (max-width: 950px) {
   .cards__item_inner-page_hidden {
     display: none;
@@ -112,11 +119,4 @@
   .slider__pagination {
     gap: 10px;
   }
-}
-
-.cards_inner-page {
-  width: 100%;
-  grid-area: list;
-  gap: 30px 40px;
-  justify-items: center;
 }
