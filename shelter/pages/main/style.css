@@ -1010,7 +1010,7 @@ html {
 
   display: flex;
   flex-wrap: wrap;
-  gap: 60px 65px;
+  gap: 65px 60px;
 }
 
 @media screen and (max-width: 1100px) {
