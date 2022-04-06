@@ -792,12 +792,15 @@ html {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 55px 60px;
+    justify-items: center;
   }
 }
 
 @media screen and (max-width: 767px) {
   .help__list {
     gap: 30px;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
   }
 }
 
@@ -810,7 +813,6 @@ html {
 
 @media screen and (max-width: 480px) {
   .help__list {
-    justify-content: space-between;
     max-width: 350px;
   }
 }
