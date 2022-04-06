@@ -221,10 +221,6 @@ html {
   gap: 35px;
 }
 
-.header__menu-button {
-  display: none;
-}
-
 @media screen and (max-width: 767px) {
   .header__menu {
     font-size: 32px;
@@ -262,6 +258,18 @@ html {
   }
 }
 
+.header__menu_opened {
+  right: 0;
+  display: flex;
+  visibility: visible;
+  transition: 0.5s;
+  opacity: 1;
+}
+
+.header__menu-button {
+  display: none;
+}
+
 @media screen and (max-width: 767px) {
   .header__menu-button {
     width: 30px;
@@ -271,29 +279,14 @@ html {
     border: none;
     border-radius: 0;
     justify-self: right;
+    transition: 0.5s;
+    z-index: 2;
   }
-}
-
-.header__menu-button:hover {
-  background-color: transparent;
-  transform: scale(1.1);
-  border: none;
-}
-
-.header__menu_opened {
-  right: 0;
-  display: flex;
-  visibility: visible;
-  transition: 0.5s;
-  opacity: 1;
 }
 
 @media screen and (max-width: 767px) {
   .header__menu-button_opened {
-    position: fixed;
-    z-index: 2;
-    display: flex;
-    background: no-repeat 50% url(../../assets/svg/button-menu-close.svg);
+    transform: rotate(-90deg);
   }
 }
 
