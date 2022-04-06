@@ -794,8 +794,10 @@ html {
   gap: 55px 120px;
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1279.2px) {
   .help__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 55px 60px;
   }
 }
