@@ -1026,7 +1026,7 @@ html {
   }
 }
 
-.footer__contacts {
+.footer__columns {
   display: grid;
   align-content: space-between;
   padding-top: 56px;
@@ -1035,7 +1035,7 @@ html {
 }
 
 @media screen and (max-width: 1100px) {
-  .footer__contacts {
+  .footer__columns {
     justify-content: center;
     padding-bottom: 0;
     padding-top: 30px;
@@ -1043,7 +1043,7 @@ html {
 }
 
 @media screen and (max-width: 576px) {
-  .footer__contacts {
+  .footer__columns {
     gap: 40px;
     height: auto;
     justify-items: center;
@@ -1063,13 +1063,13 @@ html {
   }
 }
 
-.footer__contacts-list {
+.footer__list {
   display: grid;
 
   gap: 40px;
 }
 
-.footer__contacts-list-item {
+.footer__list-item {
   display: grid;
   align-items: center;
 
