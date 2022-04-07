@@ -787,7 +787,7 @@ html {
   gap: 55px 120px;
 }
 
-@media screen and (max-width: 1279.2px) {
+@media screen and (max-width: 1200px) {
   .help__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
