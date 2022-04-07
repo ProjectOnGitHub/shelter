@@ -1077,6 +1077,12 @@ html {
   gap: 34px;
 }
 
+@media screen and (max-width: 576px) {
+  .footer__list_addresses {
+    gap: 40px;
+  }
+}
+
 .footer__list-item {
   display: grid;
   align-items: center;
