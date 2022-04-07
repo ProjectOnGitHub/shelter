@@ -1034,7 +1034,7 @@ html {
   height: 234px;
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1052px) {
   .footer__columns {
     justify-content: center;
     padding-bottom: 0;
