@@ -11,6 +11,7 @@ const toggleMenuButton = () => {
 const closeMenu = (e) => {
   if (e.target.classList.contains('header__menu-link')) {
     menuButton.classList.remove('header__menu-button_opened');
+    menuButton.classList.remove('header__menu-button_theme_light_opened');
     menu.classList.remove('header__menu_opened');
   }
 };
