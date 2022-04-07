@@ -1069,6 +1069,14 @@ html {
   gap: 40px;
 }
 
+.footer__list_contacts {
+  gap: 40px;
+}
+
+.footer__list_addresses {
+  gap: 34px;
+}
+
 .footer__list-item {
   display: grid;
   align-items: center;
