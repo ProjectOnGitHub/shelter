@@ -520,16 +520,12 @@ html {
   gap: 60px;
   grid-template-columns: 1fr;
   justify-items: center;
-}
-
-@media screen and (max-width: 576px) {
-  .pets {
+  @media screen and (max-width: 576px) {
     gap: 42px;
   }
-}
-
-.pets__title {
-  text-align: center;
+  &__title {
+    text-align: center;
+  }
 }
 
 .slider {
