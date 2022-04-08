@@ -806,8 +806,10 @@ html {
 }
 
 @media screen and (max-width: 960px) {
-  padding-right: 39px;
-  padding-left: 39px;
+  .help {
+    padding-right: 39px;
+    padding-left: 39px;
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -901,15 +903,15 @@ html {
 }
 
 @media screen and (max-width: 576px) {
-  .help__icon {
-    width: 50px;
-    height: 50px;
+  .help__list-subtitle {
+    font-size: 15px;
   }
 }
 
 @media screen and (max-width: 576px) {
-  .help__list-subtitle {
-    font-size: 15px;
+  .help__icon {
+    width: 50px;
+    height: 50px;
   }
 }
 
