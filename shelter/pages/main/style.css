@@ -761,8 +761,8 @@ html {
 }
 
 .cards__item:hover .cards__button {
-  border-color: var(--color-primary-light);
-  background-color: var(--color-primary-light);
+  border-color: #fddcc4;
+  background-color: #fddcc4;
 }
 
 @media screen and (max-width: 1198px) {
@@ -771,7 +771,7 @@ html {
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1198px) and (max-width: 767px) {
   .cards__item_hidden_768 {
     display: none;
   }
@@ -806,10 +806,8 @@ html {
 }
 
 @media screen and (max-width: 960px) {
-  .help {
-    padding-right: 39px;
-    padding-left: 39px;
-  }
+  padding-right: 39px;
+  padding-left: 39px;
 }
 
 @media screen and (max-width: 576px) {

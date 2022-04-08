@@ -590,81 +590,66 @@ html {
   grid-template-columns: repeat(auto-fill, 270px);
   grid-template-rows: repeat(auto-fill, 435px);
   justify-items: center;
-}
-
-@media screen and (max-width: 960px) {
-  .cards {
+  @media screen and (max-width: 960px) {
     gap: 30px 40px;
   }
-}
-
-@media screen and (max-width: 767px) {
-  .cards {
+  @media screen and (max-width: 767px) {
     grid-area: list;
     grid-template-columns: 1fr;
   }
-}
+  &__item {
+    display: grid;
 
-.cards__item {
-  display: grid;
+    width: 270px;
+    height: 435px;
 
-  width: 270px;
-  height: 435px;
+    transition: 0.3s ease-in-out;
 
-  transition: 0.3s ease-in-out;
+    border-radius: 9px;
+    background-color: $color-light-s;
 
-  border-radius: 9px;
-  background-color: $color-light-s;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    &:hover {
+      cursor: pointer;
 
-  grid-template-columns: 1fr;
-  justify-items: center;
-}
-
-.cards__item:hover {
-  cursor: pointer;
-
-  background-color: $color-light-xl;
-  box-shadow: 0 2px 35px rgba(13, 13, 13, 0.04);
-}
-
-.cards__item:hover .cards__button {
-  border-color: var(--color-primary-light);
-  background-color: var(--color-primary-light);
-}
-
-@media screen and (max-width: 1198px) {
-  .cards__item_hidden {
-    display: none;
+      background-color: $color-light-xl;
+      box-shadow: 0 2px 35px rgba(13, 13, 13, 0.04);
+      .cards__button {
+        border-color: $color-primary-light;
+        background-color: $color-primary-light;
+      }
+    }
+    @media screen and (max-width: 1198px) {
+      &_hidden {
+        display: none;
+        @media screen and (max-width: 767px) {
+          &_768 {
+            display: none;
+          }
+        }
+      }
+    }
   }
-}
-
-@media screen and (max-width: 767px) {
-  .cards__item_hidden_768 {
-    display: none;
+  &__figure {
+    margin: 0;
   }
-}
+  &__caption {
+    text-align: center;
+    letter-spacing: 0.06em;
 
-.cards__figure {
-  margin: 0;
-}
+    color: $color-dark-l;
 
-.cards__caption {
-  text-align: center;
-  letter-spacing: 0.06em;
+    line-height: 1.136;
+  }
+  &__image {
+    margin-bottom: 15px;
+  }
+  &__button {
+    max-width: 187px;
 
-  color: $color-dark-l;
-
-  line-height: 1.136;
-}
-
-.cards__image {
-  margin-bottom: 15px;
-}
-
-.cards__button {
-  max-width: 187px;
-
-  background-color: $color-light-xl;
+    background-color: $color-light-xl;
+  }
 }
 
 .help {
@@ -676,10 +661,8 @@ html {
 }
 
 @media screen and (max-width: 960px) {
-  .help {
-    padding-right: 39px;
-    padding-left: 39px;
-  }
+  padding-right: 39px;
+  padding-left: 39px;
 }
 
 @media screen and (max-width: 576px) {
