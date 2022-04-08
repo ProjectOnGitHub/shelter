@@ -93,14 +93,14 @@
   justify-items: center;
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 1279.2px) {
   .cards__item_inner-page_hidden {
     display: none;
   }
 }
 
-@media screen and (max-width: 639px) {
-  .cards__item_inner-page_hidden_640 {
+@media screen and (max-width: 767px) {
+  .cards__item_inner-page_hidden_767 {
     display: none;
   }
 }
