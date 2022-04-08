@@ -745,143 +745,112 @@ html {
 
   grid-template-columns: 1fr;
   justify-items: center;
-}
+  &__article {
+    align-items: center;
+    justify-content: center;
 
-.donation__article {
-  align-items: center;
-  justify-content: center;
+    gap: 30px;
+    grid-template-areas: "image info ";
+    @media screen and (max-width: 960px) {
+      padding-right: 20px;
+      padding-left: 20px;
 
-  gap: 30px;
-  grid-template-areas: "image info ";
-}
-
-@media screen and (max-width: 960px) {
-  .donation__article {
-    padding-right: 20px;
-    padding-left: 20px;
-
-    gap: 60px;
-    grid-template-areas:
-      "info"
-      "image";
-    justify-items: center;
+      gap: 60px;
+      grid-template-areas:
+        "info"
+        "image";
+      justify-items: center;
+    }
   }
-}
+  &__info {
+    display: grid;
 
-.donation__info {
-  display: grid;
+    gap: 20px;
+    grid-area: info;
+    grid-template-columns: 1fr;
+    @media screen and (max-width: 960px) {
+      max-width: 380px;
+    }
+    @media screen and (max-width: 576px) {
+      justify-items: center;
+    }
+  }
+  @media screen and (max-width: 576px) {
+    &__article {
+      padding-right: 20px;
+      padding-left: 20px;
 
-  gap: 20px;
-  grid-area: info;
-  grid-template-columns: 1fr;
-}
+      gap: 42px;
+    }
+  }
+  &__image {
+    width: 100%;
+    max-width: 505px;
+    height: auto;
 
-@media screen and (max-width: 960px) {
-  .donation__info {
+    grid-area: image;
+    object-fit: cover;
+    @media screen and (max-width: 380px) {
+      max-width: 260px;
+    }
+  }
+  &__subtitle {
+    margin: 0;
+
+    letter-spacing: 0.06em;
+
+    color: $color-dark-l;
+
+    font: normal normal 15px/1.1 "Georgia", serif;
+    @media screen and (max-width: 576px) {
+      letter-spacing: 0;
+
+      line-height: 1.6;
+    }
+  }
+  &__number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    max-width: 349px;
+    height: 43px;
+
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    letter-spacing: 0.06em;
+
+    border-radius: 9px;
+    background-color: $color-primary;
+
+    font: normal normal 20px/1.15 "Georgia", serif;
+
+    gap: 12px;
+    @media screen and (max-width: 576px) {
+      font-size: 15px;
+    }
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  &__icon {
+    fill: $color-dark-3xl;
+  }
+  &__link {
+    color: $color-dark-3xl;
+  }
+  &__text {
+    width: 100%;
     max-width: 380px;
-  }
-}
+    margin: 0;
 
-@media screen and (max-width: 576px) {
-  .donation__info {
-    justify-items: center;
-  }
-}
+    color: $color-dark-m;
 
-@media screen and (max-width: 576px) {
-  .donation__article {
-    padding-right: 20px;
-    padding-left: 20px;
-
-    gap: 42px;
-  }
-}
-
-.donation__image {
-  width: 100%;
-  max-width: 505px;
-  height: auto;
-
-  grid-area: image;
-  object-fit: cover;
-}
-
-@media screen and (max-width: 380px) {
-  .donation__image {
-    max-width: 260px;
-  }
-}
-
-.donation__subtitle {
-  margin: 0;
-
-  letter-spacing: 0.06em;
-
-  color: $color-dark-l;
-
-  font: normal normal 15px/1.1 "Georgia", serif;
-}
-
-@media screen and (max-width: 576px) {
-  .donation__subtitle {
-    letter-spacing: 0;
-
-    line-height: 1.6;
-  }
-}
-
-.donation__number {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 100%;
-  max-width: 349px;
-  height: 43px;
-
-  cursor: pointer;
-  transition: 0.3s ease-in-out;
-  letter-spacing: 0.06em;
-
-  border-radius: 9px;
-  background-color: $color-primary;
-
-  font: normal normal 20px/1.15 "Georgia", serif;
-
-  gap: 12px;
-}
-
-@media screen and (max-width: 576px) {
-  .donation__number {
-    font-size: 15px;
-  }
-}
-
-.donation__icon {
-  fill: $color-dark-3xl;
-}
-
-.donation__link {
-  color: $color-dark-3xl;
-}
-
-.donation__number:hover {
-  transform: scale(1.1);
-}
-
-.donation__text {
-  width: 100%;
-  max-width: 380px;
-  margin: 0;
-
-  color: $color-dark-m;
-
-  font: italic normal 12px/1.5 "Arial", sans-serif;
-}
-
-@media screen and (max-width: 576px) {
-  .donation__text {
-    text-align: justify;
+    font: italic normal 12px/1.5 "Arial", sans-serif;
+    @media screen and (max-width: 576px) {
+      text-align: justify;
+    }
   }
 }
 
