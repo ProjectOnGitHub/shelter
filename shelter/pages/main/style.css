@@ -581,7 +581,7 @@ html {
 @media screen and (max-width: 576px) {
   .about__text {
     gap: 22px;
-    margin-bottom: 17px;
+    margin-bottom: 15px;
     text-align: justify;
   }
 }
