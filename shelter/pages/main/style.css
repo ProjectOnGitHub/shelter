@@ -440,6 +440,12 @@ html {
   }
 }
 
+@media screen and (max-width: 480px) {
+  .start-screen__text {
+    max-width: 300px;
+  }
+}
+
 .start-screen__image {
   width: 698px;
   height: 728px;
