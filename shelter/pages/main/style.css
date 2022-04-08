@@ -113,6 +113,14 @@ html {
   height: 32px;
 }
 
+.icon__contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
 .header {
   display: -ms-grid;
   display: grid;
@@ -1101,7 +1109,7 @@ html {
 }
 
 @media screen and (max-width: 1052px) {
-  .footer__columns {
+  .footer {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -1111,7 +1119,7 @@ html {
 }
 
 @media screen and (max-width: 576px) {
-  .footer__columns {
+  .footer {
     height: auto;
     padding-top: 0;
     gap: 40px;
@@ -1161,14 +1169,6 @@ html {
   -ms-grid-columns: min-content 1fr;
       grid-template-columns: -webkit-min-content 1fr;
       grid-template-columns: min-content 1fr;
-}
-
-.icon__contacts {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-line-pack: center;
-      align-content: center;
 }
 
 .footer__link {
