@@ -534,10 +534,7 @@ html {
   gap: 12px;
   grid-template-areas: "button-prev list button-next";
   grid-template-columns: min-content 1fr min-content;
-}
-
-@media screen and (max-width: 767px) {
-  .slider {
+  @media screen and (max-width: 767px) {
     justify-content: center;
 
     grid-template-areas:
@@ -546,50 +543,41 @@ html {
     grid-template-columns: auto;
     justify-items: center;
   }
-}
-
-@media screen and (max-width: 576px) {
-  .slider {
+  @media screen and (max-width: 576px) {
     gap: 20px 0;
   }
-}
+  &__button {
+    display: grid;
+    align-content: center;
+    justify-content: center;
 
-.slider__button {
-  display: grid;
-  align-content: center;
-  justify-content: center;
+    width: 52px;
 
-  width: 52px;
+    background-color: $color-light-l;
+    &_prev {
+      grid-area: button-prev;
+    }
+    &_next {
+      grid-area: button-next;
+    }
+    &_disabled {
+      pointer-events: none;
 
-  background-color: $color-light-l;
-}
+      color: $color-dark-s;
+      border-color: $color-dark-s;
+    }
+    &_active {
+      pointer-events: none;
 
-.slider__button_prev {
-  grid-area: button-prev;
-}
+      background-color: $color-primary;
+    }
+  }
+  &__icon {
+    width: 14px;
+    height: 6px;
 
-.slider__button_next {
-  grid-area: button-next;
-}
-
-.slider__button_disabled {
-  pointer-events: none;
-
-  color: $color-dark-s;
-  border-color: $color-dark-s;
-}
-
-.slider__button_active {
-  pointer-events: none;
-
-  background-color: $color-primary;
-}
-
-.slider__icon {
-  width: 14px;
-  height: 6px;
-
-  fill: $color-dark-3xl;
+    fill: $color-dark-3xl;
+  }
 }
 
 .cards {
