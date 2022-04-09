@@ -41,17 +41,11 @@
 
 .pets_inner-page {
   gap: 60px;
-}
-
-@media screen and (max-width: 960px) {
-  .pets_inner-page {
+  @media screen and (max-width: 960px) {
     gap: 30px;
     padding-bottom: 76px;
   }
-}
-
-@media screen and (max-width: 576px) {
-  .pets_inner-page {
+  @media screen and (max-width: 576px) {
     padding-top: 42px;
     padding-bottom: 42px;
     gap: 42px;
@@ -65,16 +59,10 @@
     "pagination";
   justify-items: center;
   grid-template-columns: 1fr;
-}
-
-@media screen and (max-width: 960px) {
-  .slider_inner-page {
+  @media screen and (max-width: 960px) {
     gap: 40px;
   }
-}
-
-@media screen and (max-width: 480px) {
-  .slider_inner-page {
+  @media screen and (max-width: 480px) {
     padding-left: 10px;
     padding-right: 10px;
   }
@@ -90,12 +78,11 @@
 @media screen and (max-width: 1279.2px) {
   .cards__item_inner-page_hidden {
     display: none;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .cards__item_inner-page_hidden_767 {
-    display: none;
+    @media screen and (max-width: 767px) {
+      &_767 {
+        display: none;
+      }
+    }
   }
 }
 
@@ -104,10 +91,8 @@
   display: flex;
 
   gap: 20px;
-}
 
-@media screen and (max-width: 576px) {
-  .slider__pagination {
+  @media screen and (max-width: 576px) {
     gap: 10px;
   }
 }
