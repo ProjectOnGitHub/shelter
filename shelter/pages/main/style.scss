@@ -1,4 +1,4 @@
-@import "../pets/style.scss";
+//@import "../pets/style.scss";
 
 $color-black: #000;
 $color-dark-3xl: #292929;
@@ -94,8 +94,8 @@ html {
   &:hover {
     transform: scale(1.1);
 
-    border-color: var(--color-primary-light);
-    background-color: var(--color-primary-light);
+    border-color: $color-primary-light;
+    background-color: $color-primary-light;
   }
 }
 
