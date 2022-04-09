@@ -31,7 +31,7 @@ html {
   box-sizing: border-box;
   height: 100%;
 
-  background: url("../../assets/images/background-lines.png"),
+  background: url("../assets/images/background-lines.png"),
     radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%),
     linear-gradient(0deg, #211f20, #211f20);
 
@@ -278,7 +278,7 @@ html {
 
       border: none;
       border-radius: 0;
-      background: no-repeat 50% url("../../assets/svg/button-menu-open.svg");
+      background: no-repeat 50% url("../assets/svg/button-menu-open.svg");
 
       justify-self: right;
       @media screen and (max-width: 767px) {
@@ -418,7 +418,7 @@ html {
     width: 698px;
     height: 728px;
 
-    background: url(../../assets/images/start-screen-puppy.png) no-repeat;
+    background: url("../assets/images/start-screen-puppy.png") no-repeat;
     background-size: cover;
     @media screen and (max-width: 1200px) {
       width: 569px;
@@ -939,7 +939,7 @@ html {
     width: 300px;
     height: 310px;
 
-    background: url("../../assets/images/footer-puppy.png") no-repeat;
+    background: url("../assets/images/footer-puppy.png") no-repeat;
     background-size: cover;
     @media screen and (max-width: 576px) {
       width: 260px;
