@@ -12,15 +12,23 @@ $color-primary: #f1cdb3;
 $color-primary-light: #fddcc4;
 $main-width: 1280px;
 
+@mixin gridable {
+  display: grid;
+
+  width: 100%;
+}
+@mixin flexible {
+  display: flex;
+
+  width: 100%;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 .root {
-  display: grid;
-
   box-sizing: border-box;
-  width: 100%;
   height: 100%;
 
   background: url(../../assets/images/background-lines.png),
@@ -31,8 +39,8 @@ html {
 
   -webkit-font-smoothing: antialiased;
   grid-template-columns: 1fr;
+  @include gridable();
   justify-items: center;
-
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: auto;
   -moz-text-size-adjust: auto;
@@ -47,12 +55,11 @@ html {
 }
 
 .common-width {
-  display: grid;
-
   box-sizing: border-box;
-  width: 100%;
   max-width: $main-width;
   padding: 0 40px;
+
+  @include gridable();
 
   @media screen and (max-width: 1080px) {
     padding-right: 30px;
@@ -69,11 +76,9 @@ html {
 }
 
 .button {
-  display: grid;
   align-items: center;
 
   box-sizing: border-box;
-  width: 100%;
   max-width: 261px;
   height: 52px;
   padding: 0;
@@ -89,6 +94,7 @@ html {
 
   font: normal normal 17px/1.3 "Georgia", serif;
 
+  @include gridable();
   justify-items: center;
 
   &:hover {
@@ -132,10 +138,7 @@ html {
 }
 
 .header {
-  display: grid;
-
-  width: 100%;
-
+  @include gridable();
   justify-items: center;
 
   &__container {
@@ -304,22 +307,19 @@ html {
 }
 
 .main {
-  display: grid;
-
-  width: 100%;
-
   grid-template-columns: 1fr;
+  @include gridable();
   justify-items: center;
 }
 
 .section {
-  display: grid;
   justify-content: center;
 
   box-sizing: border-box;
-  width: 100%;
   padding-top: 80px;
   padding-bottom: 100px;
+
+  @include gridable();
 
   @media screen and (max-width: 576px) {
     padding-top: 42px;
@@ -337,17 +337,18 @@ html {
   font: normal normal 35px/1.3 "Georgia", serif;
   @media screen and (max-width: 576px) {
     text-align: center;
+
     font-size: 25px;
   }
 }
 
 .start-screen {
-  display: flex;
   justify-content: space-between;
 
-  width: 100%;
   padding-top: 0;
   padding-bottom: 0;
+
+  @include flexible();
   @media screen and (max-width: 960px) {
     display: grid;
 
@@ -373,15 +374,14 @@ html {
     padding-left: 10px;
   }
   &__info {
-    display: flex;
     flex-direction: column;
 
-    width: 100%;
     max-width: 460px;
     height: 100%;
     margin-top: 163px;
 
     gap: 42px;
+    @include flexible();
     @media screen and (max-width: 1200px) {
       justify-content: center;
 
@@ -399,9 +399,10 @@ html {
 
     font: normal normal 44px/1.3 "Georgia", serif;
     @media screen and (max-width: 576px) {
-      font-size: 25px;
       text-align: center;
       letter-spacing: 0.06em;
+
+      font-size: 25px;
     }
   }
   &__text {
@@ -495,15 +496,13 @@ html {
     grid-area: title;
   }
   &__text {
-    display: grid;
-
-    width: 100%;
     max-width: 430px;
 
     color: $color-dark-3xl;
 
     gap: 25px;
     grid-area: text;
+    @include gridable();
     @media screen and (max-width: 960px) {
       margin-bottom: 55px;
     }
@@ -587,14 +586,12 @@ html {
 }
 
 .cards {
-  display: grid;
   justify-content: center;
-
-  width: 100%;
 
   gap: 90px;
   grid-template-columns: repeat(auto-fill, 270px);
   grid-template-rows: repeat(auto-fill, 435px);
+  @include gridable();
   justify-items: center;
   @media screen and (max-width: 960px) {
     gap: 30px 40px;
@@ -815,11 +812,9 @@ html {
     }
   }
   &__number {
-    display: flex;
     align-items: center;
     justify-content: center;
 
-    width: 100%;
     max-width: 349px;
     height: 43px;
 
