@@ -1015,6 +1015,10 @@ html {
 }
 
 .donation__number {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1106,12 +1110,21 @@ html {
 }
 
 @media screen and (max-width: 1052px) {
-  .footer {
+  .footer__columns {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
     padding-top: 30px;
     padding-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .footer__columns {
+    gap: 40px;
+    height: auto;
+    justify-items: center;
+    padding-top: 0;
   }
 }
 
@@ -1267,7 +1280,7 @@ html {
 
 .slider_inner-page {
   gap: 60px;
-      grid-template-areas: "list" "pagination";
+      grid-template-areas: "list" "pagination";
   justify-items: center;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
