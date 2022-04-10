@@ -1090,9 +1090,14 @@ html {
   }
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 1052px) {
   .footer {
     padding-top: 30px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .footer {
     padding-right: 10px;
     padding-left: 10px;
     gap: 40px;
@@ -1114,7 +1119,7 @@ html {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    padding-top: 30px;
+    padding-top: 0;
     padding-bottom: 0;
   }
 }
@@ -1125,15 +1130,6 @@ html {
     height: auto;
     justify-items: center;
     padding-top: 0;
-  }
-}
-
-@media screen and (max-width: 576px) {
-  .footer {
-    height: auto;
-    padding-top: 0;
-    gap: 40px;
-    justify-items: center;
   }
 }
 

@@ -869,7 +869,6 @@ html {
     padding-top: 30px;
   }
   @media screen and (max-width: 576px) {
-    padding-top: 30px;
     padding-right: 10px;
     padding-left: 10px;
 
@@ -884,8 +883,7 @@ html {
     padding-bottom: 60px;
     @media screen and (max-width: 1052px) {
       justify-content: center;
-
-      padding-top: 30px;
+      padding-top: 0;
       padding-bottom: 0;
     }
     @media screen and (max-width: 576px) {
@@ -896,13 +894,6 @@ html {
     }
   }
 
-  @media screen and (max-width: 576px) {
-    height: auto;
-    padding-top: 0;
-
-    gap: 40px;
-    justify-items: center;
-  }
   &__title {
     width: 100%;
     max-width: 13ch;
