@@ -1154,6 +1154,12 @@ html {
   gap: 40px;
 }
 
+@media screen and (max-width: 576px) {
+  .footer__list_contacts {
+    justify-items: center;
+  }
+}
+
 .footer__list_addresses {
   gap: 34px;
 }
