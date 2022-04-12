@@ -33,6 +33,12 @@
   &__menu-link_theme_light:hover {
     color: $color-dark-3xl;
   }
+  &__menu-link_theme_light_active {
+    padding-bottom: 5px;
+
+    color: $color-dark-3xl;
+    border-bottom: 3px solid $color-primary;
+  }
 }
 
 .main_inner-page {

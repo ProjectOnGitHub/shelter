@@ -559,13 +559,13 @@ html {
           justify-content: center;
   -webkit-column-gap: 120px;
           column-gap: 120px;
-      grid-template-areas: "image title" "image text";
+      grid-template-areas: "image title" "image text";
 }
 
 @media screen and (max-width: 960px) {
   .about__article {
     gap: 25px;
-        grid-template-areas: "title" "text" "image";
+        grid-template-areas: "title" "text" "image";
   }
 }
 
@@ -662,7 +662,7 @@ html {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-        grid-template-areas: "list list" "button-prev button-next";
+        grid-template-areas: "list list" "button-prev button-next";
     -ms-grid-columns: auto;
         grid-template-columns: auto;
     justify-items: center;
@@ -946,7 +946,7 @@ html {
     padding-right: 20px;
     padding-left: 20px;
     gap: 60px;
-        grid-template-areas: "info" "image";
+        grid-template-areas: "info" "image";
     justify-items: center;
   }
 }
