@@ -298,7 +298,7 @@ html {
     transition: 0.5s;
     border: none;
     border-radius: 0;
-    background: no-repeat 50% url(../assets/svg/button-menu-open.svg);
+    background: no-repeat 50% url(../svg/button-menu-open.svg);
     justify-self: right;
   }
 }
