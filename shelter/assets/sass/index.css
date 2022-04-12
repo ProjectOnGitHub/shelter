@@ -1,3 +1,5 @@
+@import url("../normalize.css");
+@import url("../fonts.css");
 html {
   scroll-behavior: smooth;
 }
@@ -6,8 +8,8 @@ html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   height: 100%;
-  background: url(../assets/images/background-lines.png), radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%), -webkit-gradient(linear, left bottom, left top, from(#211f20), to(#211f20));
-  background: url(../assets/images/background-lines.png), radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%), linear-gradient(0deg, #211f20, #211f20);
+  background: url(../images/background-lines.png), radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%), -webkit-gradient(linear, left bottom, left top, from(#211f20), to(#211f20));
+  background: url(../images/background-lines.png), radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%), linear-gradient(0deg, #211f20, #211f20);
   font: normal 20px/2 "Georgia", serif;
   -webkit-font-smoothing: antialiased;
   -ms-grid-columns: 1fr;
@@ -481,7 +483,7 @@ html {
 .start-screen__image {
   width: 698px;
   height: 728px;
-  background: url(../assets/images/start-screen-puppy.png) no-repeat;
+  background: url(../images/start-screen-puppy.png) no-repeat;
   background-size: cover;
 }
 
@@ -1013,6 +1015,10 @@ html {
 }
 
 .donation__number {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1084,9 +1090,14 @@ html {
   }
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 1052px) {
   .footer {
     padding-top: 30px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .footer {
     padding-right: 10px;
     padding-left: 10px;
     gap: 40px;
@@ -1104,21 +1115,21 @@ html {
 }
 
 @media screen and (max-width: 1052px) {
-  .footer {
+  .footer__columns {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    padding-top: 30px;
+    padding-top: 0;
     padding-bottom: 0;
   }
 }
 
 @media screen and (max-width: 576px) {
-  .footer {
-    height: auto;
-    padding-top: 0;
+  .footer__columns {
     gap: 40px;
+    height: auto;
     justify-items: center;
+    padding-top: 0;
   }
 }
 
@@ -1142,6 +1153,12 @@ html {
 
 .footer__list_contacts {
   gap: 40px;
+}
+
+@media screen and (max-width: 576px) {
+  .footer__list_contacts {
+    justify-items: center;
+  }
 }
 
 .footer__list_addresses {
@@ -1185,7 +1202,7 @@ html {
       align-self: end;
   width: 300px;
   height: 310px;
-  background: url(../assets/images/footer-puppy.png) no-repeat;
+  background: url(../images/footer-puppy.png) no-repeat;
   background-size: cover;
 }
 
@@ -1238,6 +1255,12 @@ html {
 
 .header__menu-link_theme_light:hover {
   color: #292929;
+}
+
+.header__menu-link_theme_light_active {
+  padding-bottom: 5px;
+  color: #292929;
+  border-bottom: 3px solid #f1cdb3;
 }
 
 .main_inner-page {
@@ -1320,4 +1343,4 @@ html {
     gap: 10px;
   }
 }
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=index.css.map */
