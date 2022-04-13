@@ -153,14 +153,14 @@ html {
     @media screen and (max-width: 1080px) {
       height: 120px;
     }
-    @media screen and (max-width: 576px) {
+    @media screen and (max-width: 768px) {
+      justify-content: right;
+      gap: 43px;
+      grid-template-columns: auto;
       padding-right: 50px;
-      padding-left: 65px;
     }
-    @media screen and (max-width: 350px) {
-      padding-left: 35px;
-    }
-    @media screen and (max-width: 330px) {
+
+    @media screen and (max-width: 375px) {
       padding-left: 10px;
     }
   }
@@ -201,6 +201,7 @@ html {
     justify-content: end;
 
     height: 30px;
+    min-width: 30px;
 
     grid-area: navigation;
   }
@@ -210,7 +211,7 @@ html {
     font: normal normal 15px/1.6 "Arial", sans-serif;
 
     gap: 35px;
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 767.2px) {
       position: fixed;
       z-index: 1;
       top: 0;
@@ -266,7 +267,7 @@ html {
   }
   &__menu-button {
     display: none;
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 767.2px) {
       z-index: 2;
 
       display: flex;
@@ -275,7 +276,6 @@ html {
       height: 30px;
 
       transition: 0.5s;
-
       border: none;
       border-radius: 0;
       background: no-repeat 50% url(../svg/button-menu-open.svg);
