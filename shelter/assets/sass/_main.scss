@@ -467,7 +467,7 @@ html {
     grid-template-areas:
       "image title"
       "image text";
-    @media screen and (max-width: 960px) {
+    @media screen and (max-width: 1279.2px) {
       gap: 25px;
       grid-template-areas:
         "title"
@@ -481,7 +481,7 @@ html {
     height: auto;
 
     grid-area: image;
-    @media screen and (max-width: 960px) {
+    @media screen and (max-width: 1279.2px) {
       justify-self: center;
     }
     @media screen and (max-width: 576px) {
@@ -536,6 +536,8 @@ html {
   gap: 12px;
   grid-template-areas: "button-prev list button-next";
   grid-template-columns: min-content 1fr min-content;
+  justify-items: center;
+
   @media screen and (max-width: 767px) {
     justify-content: center;
 
@@ -543,7 +545,6 @@ html {
       "list list"
       "button-prev button-next";
     grid-template-columns: auto;
-    justify-items: center;
   }
   @media screen and (max-width: 576px) {
     gap: 20px 0;
@@ -590,7 +591,8 @@ html {
   grid-template-rows: repeat(auto-fill, 435px);
   @include gridable();
   justify-items: center;
-  @media screen and (max-width: 960px) {
+  @media screen and (max-width: 1279.2px) {
+    max-width: 800px;
     gap: 30px 40px;
   }
   @media screen and (max-width: 767px) {
@@ -620,7 +622,7 @@ html {
         background-color: $color-primary-light;
       }
     }
-    @media screen and (max-width: 1198px) {
+    @media screen and (max-width: 1279.2px) {
       &_hidden {
         display: none;
         @media screen and (max-width: 767px) {
