@@ -1,3 +1,6 @@
+import pets from '../../assets/utils/pets.js';
+
+console.log(pets);
 const menu = document.querySelector('.header__menu');
 const menuButton = document.querySelector('.header__menu-button');
 
@@ -19,42 +22,36 @@ const closeMenu = (e) => {
 menuButton.addEventListener('click', toggleMenuButton);
 menu.addEventListener('click', closeMenu);
 
-// const url = '../../assets/utils/pets.json';
+const addCards = () => {
+  pets.forEach((item) => {
+    const card = new Card(item.name, item.img);
+    const cardElement = card.generateCard();
+    document.querySelector('.cards').append(cardElement);
+  });
+};
 
-// async function getPets() {
-//   const res = await fetch(url);
-//   const data = await res.json();
-//   return data.forEach((item) => {
-//     const card = new Card(item.name, item.img);
+class Card {
+  constructor(name, img) {
+    this.name = name;
+    this.img = img;
+  }
 
-//     const cardElement = card.generateCard();
+  getTemplate() {
+    const cardElement = document
+      .querySelector('.cards__template')
+      .content
+      .querySelector('.cards__item')
+      .cloneNode(true);
+    return cardElement;
+  }
 
-//     document.querySelector('.cards').append(cardElement);
-//   });
-// }
+  generateCard() {
+    this.element = this.getTemplate();
+    this.element.querySelector('.cards__image').src = this.img;
+    this.element.querySelector('.cards__image').alt = this.name;
+    this.element.querySelector('.cards__caption').textContent = this.name;
+    return this.element;
+  }
+}
 
-// class Card {
-//   constructor(name, img) {
-//     this.name = name;
-//     this.img = img;
-//   }
-
-//   getTemplate() {
-//     const cardElement = document
-//       .querySelector('.cards__template')
-//       .content
-//       .querySelector('.cards__item')
-//       .cloneNode(true);
-//     return cardElement;
-//   }
-
-//   generateCard() {
-//     this.element = this.getTemplate();
-//     this.element.querySelector('.cards__image').src = this.img;
-//     this.element.querySelector('.cards__image').alt = this.name;
-//     this.element.querySelector('.cards__caption').textContent = this.name;
-//     return this.element;
-//   }
-// }
-
-// getPets();
+addCards();
