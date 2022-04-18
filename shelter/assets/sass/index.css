@@ -152,9 +152,6 @@ html {
 
 @media screen and (max-width: 767.2px) {
   .header__container {
-    -webkit-box-pack: right;
-        -ms-flex-pack: right;
-            justify-content: right;
     gap: 43px;
     -ms-grid-columns: auto;
         grid-template-columns: auto;
@@ -169,7 +166,6 @@ html {
 }
 
 .header__logo {
-  z-index: 3;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -187,6 +183,21 @@ html {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: logo;
+}
+
+.header__logo_menu {
+  position: absolute;
+  top: 30px;
+  left: 10px;
+  display: none;
+}
+
+@media screen and (max-width: 767.2px) {
+  .header__logo_menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .header__title {

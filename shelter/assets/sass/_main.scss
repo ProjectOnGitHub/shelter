@@ -154,7 +154,6 @@ html {
       height: 120px;
     }
     @media screen and (max-width: 767.2px) {
-      justify-content: right;
       gap: 43px;
       grid-template-columns: auto;
       padding-right: 50px;
@@ -165,8 +164,6 @@ html {
     }
   }
   &__logo {
-    z-index: 3;
-
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -175,6 +172,15 @@ html {
     height: 60px;
 
     grid-area: logo;
+    &_menu {
+      position: absolute;
+      top: 30px;
+      left: 10px;
+      display: none;
+      @media screen and (max-width: 767.2px) {
+        display: flex;
+      }
+    }
   }
   &__title {
     margin: 0;
