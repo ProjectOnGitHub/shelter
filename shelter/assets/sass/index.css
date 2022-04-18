@@ -156,10 +156,11 @@ html {
     -ms-grid-columns: auto;
         grid-template-columns: auto;
     padding-right: 50px;
+    padding-left: 65px;
   }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 374px) {
   .header__container {
     padding-left: 10px;
   }
@@ -1293,7 +1294,7 @@ html {
 
 .slider_inner-page {
   gap: 60px;
-      grid-template-areas: "list" "pagination";
+      grid-template-areas: "list" "pagination";
   justify-items: center;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
