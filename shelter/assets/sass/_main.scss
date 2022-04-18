@@ -335,9 +335,10 @@ html {
   color: $color-dark-l;
 
   font: normal normal 35px/1.3 "Georgia", serif;
-  @media screen and (max-width: 576px) {
+  @media screen and (max-width: 767.2px) {
     text-align: center;
-
+  }
+  @media screen and (max-width: 576px) {
     font-size: 25px;
   }
 }
@@ -535,7 +536,7 @@ html {
   grid-template-columns: min-content 1fr min-content;
   justify-items: center;
 
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 767.2px) {
     justify-content: center;
 
     grid-template-areas:
@@ -592,7 +593,7 @@ html {
     max-width: 800px;
     gap: 30px 40px;
   }
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 767.2px) {
     grid-area: list;
     grid-template-columns: 1fr;
   }
@@ -622,7 +623,7 @@ html {
     @media screen and (max-width: 1279.2px) {
       &_hidden {
         display: none;
-        @media screen and (max-width: 767px) {
+        @media screen and (max-width: 767.2px) {
           &_768 {
             display: none;
           }

@@ -363,9 +363,14 @@ html {
   font: normal normal 35px/1.3 "Georgia", serif;
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 767.2px) {
   .title {
     text-align: center;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .title {
     font-size: 25px;
   }
 }
@@ -650,7 +655,7 @@ html {
   justify-items: center;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 767.2px) {
   .slider {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -730,7 +735,7 @@ html {
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 767.2px) {
   .cards {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
@@ -771,7 +776,7 @@ html {
   }
 }
 
-@media screen and (max-width: 1279.2px) and (max-width: 767px) {
+@media screen and (max-width: 1279.2px) and (max-width: 767.2px) {
   .cards__item_hidden_768 {
     display: none;
   }
