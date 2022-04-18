@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("../normalize.css");
 @import url("../fonts.css");
 html {
@@ -1218,6 +1219,109 @@ html {
   }
 }
 
+.popup {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(41, 41, 41, 0.6);
+  z-index: 2;
+  -webkit-transition: visibility 0.5s, opacity 0.5s ease-in-out;
+  transition: visibility 0.5s, opacity 0.5s ease-in-out;
+}
+
+.popup__container {
+  font: normal 15px/1.1 "Georgia", serif;
+  letter-spacing: 0.06em;
+  position: relative;
+  max-width: 900px;
+  max-height: 500px;
+  gap: 29px;
+  display: -ms-grid;
+  display: grid;
+  width: 100%;
+  -ms-grid-columns: 1fr max-content;
+      grid-template-columns: 1fr -webkit-max-content;
+      grid-template-columns: 1fr max-content;
+  height: 100%;
+  background-color: #fafafa;
+  border-radius: 9px;
+}
+
+.popup__close-button {
+  position: absolute;
+  width: 52px;
+  background-color: transparent;
+  right: -42px;
+  top: -52px;
+}
+
+.popup__icon {
+  width: 12px;
+  height: 12px;
+  fill: #292929;
+}
+
+.popup__image {
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+}
+
+.popup__article {
+  padding-top: 50px;
+  padding-right: 20px;
+  max-width: 351px;
+  width: 100%;
+}
+
+.popup__title {
+  font: normal 35px/1.3 "Georgia", serif;
+  letter-spacing: 0.06em;
+  margin: 0 0 10px 0;
+}
+
+.popup__subtitle {
+  font: normal 20px/1.15 "Georgia", serif;
+  margin: 0;
+}
+
+.popup__text {
+  margin: 40px 0;
+}
+
+.popup__list {
+  display: -ms-grid;
+  display: grid;
+  max-height: 102px;
+  height: 100%;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+}
+
+.popup__list-item {
+  font-weight: bold;
+}
+
+.popup__list-item_value {
+  font-weight: normal;
+}
+
+.popup__list-item:before {
+  content: "•";
+  color: #f1cdb3;
+}
+
 .header_theme_light {
   background-color: #fff;
   position: fixed;
@@ -1293,7 +1397,7 @@ html {
 
 .slider_inner-page {
   gap: 60px;
-      grid-template-areas: "list" "pagination";
+      grid-template-areas: "list" "pagination";
   justify-items: center;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
