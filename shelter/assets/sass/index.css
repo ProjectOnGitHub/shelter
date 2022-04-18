@@ -1282,7 +1282,7 @@ html {
 
 .slider_inner-page {
   gap: 60px;
-      grid-template-areas: "list" "pagination";
+      grid-template-areas: "list" "pagination";
   justify-items: center;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
@@ -1316,7 +1316,7 @@ html {
   }
 }
 
-@media screen and (max-width: 1279.2px) and (max-width: 767px) {
+@media screen and (max-width: 1279.2px) and (max-width: 767.2px) {
   .cards__item_inner-page_hidden_767 {
     display: none;
   }
