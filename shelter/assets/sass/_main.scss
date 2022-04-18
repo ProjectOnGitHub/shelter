@@ -157,9 +157,10 @@ html {
       gap: 43px;
       grid-template-columns: auto;
       padding-right: 50px;
+      padding-left: 65px;
     }
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 374px) {
       padding-left: 10px;
     }
   }
