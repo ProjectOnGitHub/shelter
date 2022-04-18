@@ -1259,6 +1259,14 @@ html {
   border-radius: 9px;
 }
 
+@media screen and (max-width: 1279.2px) {
+  .popup__container {
+    max-width: 630px;
+    max-height: 350px;
+    gap: 11px;
+  }
+}
+
 .popup__close-button {
   position: absolute;
   width: 52px;
@@ -1279,11 +1287,25 @@ html {
   height: auto;
 }
 
+@media screen and (max-width: 1279.2px) {
+  .popup__image {
+    max-width: 350px;
+  }
+}
+
 .popup__article {
   padding-top: 50px;
   padding-right: 20px;
   max-width: 351px;
   width: 100%;
+}
+
+@media screen and (max-width: 1279.2px) {
+  .popup__article {
+    max-width: 261px;
+    padding-top: 10px;
+    padding-right: 10px;
+  }
 }
 
 .popup__title {
@@ -1294,11 +1316,22 @@ html {
 
 .popup__subtitle {
   font: normal 20px/1.15 "Georgia", serif;
+  letter-spacing: 0.06em;
   margin: 0;
 }
 
 .popup__text {
-  margin: 40px 0;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  letter-spacing: 0.06em;
+}
+
+@media screen and (max-width: 1279.2px) {
+  .popup__text {
+    font-size: 13px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
 }
 
 .popup__list {
@@ -1308,6 +1341,12 @@ html {
   height: 100%;
   -ms-flex-line-pack: justify;
       align-content: space-between;
+}
+
+@media screen and (max-width: 1279.2px) {
+  .popup__list {
+    max-height: 87px;
+  }
 }
 
 .popup__list-item {
