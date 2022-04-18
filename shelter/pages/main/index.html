@@ -2,26 +2,37 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="shortcut icon" href="../../assets/favicon.ico" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../../pages/index.css" />
+    <link rel="stylesheet" href="../../assets/sass/index.css" />
     <title>Cozy House</title>
   </head>
   <body>
     <div class="root">
       <header class="header">
         <div class="header__container common-width">
-          <div class="header__logo">
+          <a href="../main" class="link header__logo">
             <h1 class="header__title">Cozy House</h1>
             <p class="header__text">Shelter for pets in Boston</p>
-          </div>
+          </a>
           <nav class="header__navigation">
-            <ul class="text header__menu list">
+            <button
+              aria-label="mobile menu"
+              type="button"
+              class="header__menu-button"
+              aria-label="mobile menu"
+            ></button>
+            <ul class="header__menu list">
+              <a href="../main" class="link header__logo header__logo_menu">
+                <h1 class="header__title">Cozy House</h1>
+                <p class="header__text">Shelter for pets in Boston</p>
+              </a>
               <li class="header__menu-item">
                 <a
                   href="../main"
                   class="header__menu-link link header__menu-link_active"
-                  >About the shelters</a
+                  >About the shelter</a
                 >
               </li>
               <li class="header__menu-item">
@@ -42,7 +53,10 @@
       <main class="main">
         <section class="section common-width start-screen">
           <div class="start-screen__info">
-            <h2 class="start-screen__title">Not only people need a house</h2>
+            <h2 class="start-screen__title">
+              Not only people <br />
+              need a house
+            </h2>
             <p class="text start-screen__text">
               We offer to give a chance to a little and nice puppy with an
               extremely wide and open heart. He or she will love you more than
@@ -89,13 +103,17 @@
             are looking for a house
           </h3>
           <div class="slider common-width">
-            <button class="button slider__button slider__button_prev">
+            <button
+              type="button"
+              class="button slider__button slider__button_prev"
+              aria-label="previous slide"
+            >
               <svg class="icon slider__icon">
                 <use xlink:href="../../assets/svg/sprite.svg#arrow-left"></use>
               </svg>
             </button>
-            <ul class="list cards__list">
-              <li class="cards__list-item">
+            <ul class="list cards">
+              <li class="cards__item">
                 <figure class="cards__figure">
                   <img
                     src="../../assets/images/katrine.png"
@@ -104,9 +122,11 @@
                   />
                   <figcaption class="cards__caption">Katrine</figcaption>
                 </figure>
-                <button class="button cards__button">Learn more</button>
+                <button type="button" class="button cards__button">
+                  Learn more
+                </button>
               </li>
-              <li class="cards__list-item">
+              <li class="cards__item cards__item_hidden_768">
                 <figure class="cards__figure">
                   <img
                     src="../../assets/images/jennifer.png"
@@ -115,9 +135,11 @@
                   />
                   <figcaption class="cards__caption">Jennifer</figcaption>
                 </figure>
-                <button class="button cards__button">Learn more</button>
+                <button type="button" class="button cards__button">
+                  Learn more
+                </button>
               </li>
-              <li class="cards__list-item">
+              <li class="cards__item cards__item_hidden">
                 <figure class="cards__figure">
                   <img
                     src="../../assets/images/woody.png"
@@ -126,10 +148,16 @@
                   />
                   <figcaption class="cards__caption">Woddy</figcaption>
                 </figure>
-                <button class="button cards__button">Learn more</button>
+                <button type="button" class="button cards__button">
+                  Learn more
+                </button>
               </li>
             </ul>
-            <button class="button slider__button slider__button_next">
+            <button
+              type="button"
+              class="button slider__button slider__button_next"
+              aria-label="next slide"
+            >
               <svg class="icon slider__icon">
                 <use xlink:href="../../assets/svg/sprite.svg#arrow-right"></use>
               </svg>
@@ -146,7 +174,7 @@
           </h3>
           <ul class="list help__list common-width">
             <li class="help__list-item">
-              <svg class="icon">
+              <svg class="icon help__icon">
                 <use
                   xlink:href="../../assets/svg/sprite.svg#icon-pet-food"
                 ></use>
@@ -154,7 +182,7 @@
               <h4 class="help__list-subtitle">Pet food</h4>
             </li>
             <li class="help__list-item">
-              <svg class="icon">
+              <svg class="icon help__icon">
                 <use
                   xlink:href="../../assets/svg/sprite.svg#transportation"
                 ></use>
@@ -162,13 +190,13 @@
               <h4 class="help__list-subtitle">Transportation</h4>
             </li>
             <li class="help__list-item">
-              <svg class="icon">
+              <svg class="icon help__icon">
                 <use xlink:href="../../assets/svg/sprite.svg#icon-toys"></use>
               </svg>
               <h4 class="help__list-subtitle">Toys</h4>
             </li>
             <li class="help__list-item">
-              <svg class="icon">
+              <svg class="icon help__icon">
                 <use
                   xlink:href="../../assets/svg/sprite.svg#icon-bowls-and-cups"
                 ></use>
@@ -176,7 +204,7 @@
               <h4 class="help__list-subtitle">Bowls and cups</h4>
             </li>
             <li class="help__list-item">
-              <svg class="icon">
+              <svg class="icon help__icon">
                 <use
                   xlink:href="../../assets/svg/sprite.svg#icon-shampoos"
                 ></use>
@@ -184,7 +212,7 @@
               <h4 class="help__list-subtitle">Shampoos</h4>
             </li>
             <li class="help__list-item">
-              <svg class="icon">
+              <svg class="icon help__icon">
                 <use
                   xlink:href="../../assets/svg/sprite.svg#icon-vitamins"
                 ></use>
@@ -192,7 +220,7 @@
               <h4 class="help__list-subtitle">Vitamins</h4>
             </li>
             <li class="help__list-item">
-              <svg class="icon">
+              <svg class="icon help__icon">
                 <use
                   xlink:href="../../assets/svg/sprite.svg#icon-medicines"
                 ></use>
@@ -200,7 +228,7 @@
               <h4 class="help__list-subtitle">Medicines</h4>
             </li>
             <li class="help__list-item">
-              <svg class="icon">
+              <svg class="icon help__icon">
                 <use
                   xlink:href="../../assets/svg/sprite.svg#icon-collars-leashes"
                 ></use>
@@ -208,7 +236,7 @@
               <h4 class="help__list-subtitle">Collars / leashes</h4>
             </li>
             <li class="help__list-item">
-              <svg class="icon">
+              <svg class="icon help__icon">
                 <use
                   xlink:href="../../assets/svg/sprite.svg#icon-sleeping-area"
                 ></use>
@@ -224,35 +252,37 @@
               alt="Dog"
               class="donation__image"
             />
-            <h3 class="title donation__title">
-              You can also <br />
-              make a donation
-            </h3>
-            <h4 class="donation__subtitle">
-              Name of the bank / Type of bank account
-            </h4>
-            <div class="donation__number">
-              <svg class="icon icon_sm donation__icon">
-                <use xlink:href="../../assets/svg/sprite.svg#credit-card"></use>
-              </svg>
-              <a class="link donation__link"> 8380 2880 8028 8791 7435 </a>
+            <div class="donation__info">
+              <h3 class="title donation__title">
+                You can also <br />
+                make a donation
+              </h3>
+              <h4 class="donation__subtitle">
+                Name of the bank / Type of bank account
+              </h4>
+              <div class="donation__number">
+                <svg class="icon icon_sm donation__icon">
+                  <use
+                    xlink:href="../../assets/svg/sprite.svg#credit-card"
+                  ></use>
+                </svg>
+                <a class="link donation__link"> 8380 2880 8028 8791 7435 </a>
+              </div>
+              <p class="donation__text">
+                Legal information and lorem ipsum dolor sit amet, consectetur
+                adipiscing elit. Maecenas a ipsum at libero sagittis dignissim
+                sed ac diam. Praesent ultrices maximus tortor et vulputate.
+                Interdum et malesuada fames ac ante ipsum primis in faucibus.
+              </p>
             </div>
-            <p class="donation__text">
-              Legal information and lorem ipsum dolor sit amet, consectetur
-              adipiscing elit. Maecenas a ipsum at libero sagittis dignissim sed
-              ac diam. Praesent ultrices maximus tortor et vulputate. Interdum
-              et malesuada fames ac ante ipsum primis in faucibus.
-            </p>
           </article>
         </section>
       </main>
       <footer id="contacts" class="footer common-width">
-        <div class="footer__contacts">
-          <h3 class="title footer__title">
-            For questions <br />and suggestions
-          </h3>
-          <ul class="list footer__contacts-list">
-            <li class="footer__contacts-list-item">
+        <div class="footer__columns">
+          <h3 class="title footer__title">For questions and suggestions</h3>
+          <ul class="list footer__list footer__list_contacts">
+            <li class="footer__list-item">
               <svg class="icon icon_m icon__contacts">
                 <use xlink:href="../../assets/svg/sprite.svg#icon-email"></use>
               </svg>
@@ -260,7 +290,7 @@
                 email@shelter.com
               </a>
             </li>
-            <li class="footer__contacts-list-item">
+            <li class="footer__list-item">
               <svg class="icon icon_m icon__contacts">
                 <use xlink:href="../../assets/svg/sprite.svg#phone"></use>
               </svg>
@@ -270,13 +300,10 @@
             </li>
           </ul>
         </div>
-        <div class="footer__contacts">
-          <h3 class="title footer__title">
-            We are waiting<br />
-            for your visit
-          </h3>
-          <ul class="list footer__contacts-list">
-            <li class="footer__contacts-list-item">
+        <div class="footer__columns">
+          <h3 class="title footer__title">We are waiting for your visit</h3>
+          <ul class="list footer__list footer__list_addresses">
+            <li class="footer__list-item">
               <svg class="icon icon_s icon__contacts">
                 <use xlink:href="../../assets/svg/sprite.svg#icon-marker"></use>
               </svg>
@@ -288,7 +315,7 @@
                 1 Central Street, Boston<br />(entrance from the store)
               </a>
             </li>
-            <li class="footer__contacts-list-item">
+            <li class="footer__list-item">
               <svg class="icon icon_s icon__contacts">
                 <use xlink:href="../../assets/svg/sprite.svg#icon-marker"></use>
               </svg>
@@ -305,6 +332,6 @@
         <div class="footer__image"></div>
       </footer>
     </div>
-    <script src="../../pages/main/script.js"></script>
+    <script type="module" src="../../pages/index.js"></script>
   </body>
 </html>

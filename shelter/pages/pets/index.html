@@ -2,48 +2,64 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="shortcut icon" href="../../assets/favicon.ico" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../../pages/index.css" />
+    <link rel="stylesheet" href="../../assets/sass/index.css" />
     <title>Cozy House -</title>
   </head>
   <body>
     <div class="root">
-      <header class="header header_light">
-        <div class="header__container common-width">
-          <div class="header__logo">
-            <h1 class="header__title header__title_light">Cozy House</h1>
-            <p class="header__text header__text_light">
+      <header class="header header_theme_light">
+        <div
+          class="header__container common-width header__container_theme_light"
+        >
+          <a href="../main" class="link header__logo">
+            <h1 class="header__title header__title_theme_light">Cozy House</h1>
+            <p class="header__text header__text_theme_light">
               Shelter for pets in Boston
             </p>
-          </div>
+          </a>
           <nav class="header__navigation">
-            <ul class="text header__menu list">
+            <button
+              type="button"
+              class="header__menu-button header__menu-button_theme_light"
+              aria-label="mobile menu"
+            ></button>
+            <ul class="header__menu list header__menu_theme_light">
+              <a href="../main" class="link header__logo header__logo_menu">
+                <h1 class="header__title header__title_theme_light">
+                  Cozy House
+                </h1>
+                <p class="header__text header__text_theme_light">
+                  Shelter for pets in Boston
+                </p>
+              </a>
               <li class="header__menu-item">
                 <a
                   href="../main"
-                  class="header__menu-link header__menu-link_light link"
-                  >About the shelters</a
+                  class="header__menu-link header__menu-link_theme_light link"
+                  >About the shelter</a
                 >
               </li>
               <li class="header__menu-item">
                 <a
                   href="../pets"
-                  class="header__menu-link header__menu-link_light link header__menu-link_active"
+                  class="header__menu-link header__menu-link_theme_light link header__menu-link_theme_light_active"
                   >Our pets</a
                 >
               </li>
               <li class="header__menu-item">
                 <a
                   href="../main/#help"
-                  class="header__menu-link header__menu-link_light link"
+                  class="header__menu-link header__menu-link_theme_light link"
                   >Help the shelter</a
                 >
               </li>
               <li class="header__menu-item">
                 <a
                   href="#contacts"
-                  class="header__menu-link header__menu-link_light link"
+                  class="header__menu-link header__menu-link_theme_light link"
                   >Contacts</a
                 >
               </li>
@@ -51,15 +67,15 @@
           </nav>
         </div>
       </header>
-      <main class="main">
-        <section id="pets" class="section pets">
+      <main class="main main_inner-page">
+        <section id="pets" class="section pets pets_inner-page">
           <h3 class="title pets__title">
             Our friends who <br />
             are looking for a house
           </h3>
-          <div class="slider slider_full common-width">
-            <ul class="list cards__list cards__list_full">
-              <li class="cards__list-item">
+          <div class="slider slider_inner-page common-width">
+            <ul class="list cards cards_inner-page">
+              <li class="cards__item">
                 <figure class="cards__figure">
                   <img
                     src="../../assets/images/katrine.png"
@@ -68,9 +84,11 @@
                   />
                   <figcaption class="cards__caption">Katrine</figcaption>
                 </figure>
-                <button class="button cards__button">Learn more</button>
+                <button type="button" class="button cards__button">
+                  Learn more
+                </button>
               </li>
-              <li class="cards__list-item">
+              <li class="cards__item">
                 <figure class="cards__figure">
                   <img
                     src="../../assets/images/jennifer.png"
@@ -79,9 +97,11 @@
                   />
                   <figcaption class="cards__caption">Jennifer</figcaption>
                 </figure>
-                <button class="button cards__button">Learn more</button>
+                <button type="button" class="button cards__button">
+                  Learn more
+                </button>
               </li>
-              <li class="cards__list-item">
+              <li class="cards__item">
                 <figure class="cards__figure">
                   <img
                     src="../../assets/images/woody.png"
@@ -90,9 +110,11 @@
                   />
                   <figcaption class="cards__caption">Woddy</figcaption>
                 </figure>
-                <button class="button cards__button">Learn more</button>
+                <button type="button" class="button cards__button">
+                  Learn more
+                </button>
               </li>
-              <li class="cards__list-item">
+              <li class="cards__item cards__item_inner-page_hidden_767">
                 <figure class="cards__figure">
                   <img
                     src="../../assets/images/sophia.png"
@@ -101,9 +123,11 @@
                   />
                   <figcaption class="cards__caption">Sophia</figcaption>
                 </figure>
-                <button class="button cards__button">Learn more</button>
+                <button type="button" class="button cards__button">
+                  Learn more
+                </button>
               </li>
-              <li class="cards__list-item">
+              <li class="cards__item cards__item_inner-page_hidden_767">
                 <figure class="cards__figure">
                   <img
                     src="../../assets/images/timmy.png"
@@ -112,9 +136,11 @@
                   />
                   <figcaption class="cards__caption">Timmy</figcaption>
                 </figure>
-                <button class="button cards__button">Learn more</button>
+                <button type="button" class="button cards__button">
+                  Learn more
+                </button>
               </li>
-              <li class="cards__list-item">
+              <li class="cards__item cards__item_inner-page_hidden_767">
                 <figure class="cards__figure">
                   <img
                     src="../../assets/images/charly.png"
@@ -123,9 +149,11 @@
                   />
                   <figcaption class="cards__caption">Charly</figcaption>
                 </figure>
-                <button class="button cards__button">Learn more</button>
+                <button type="button" class="button cards__button">
+                  Learn more
+                </button>
               </li>
-              <li class="cards__list-item">
+              <li class="cards__item cards__item_inner-page_hidden">
                 <figure class="cards__figure">
                   <img
                     src="../../assets/images/scarlett.png"
@@ -134,9 +162,11 @@
                   />
                   <figcaption class="cards__caption">Scarlett</figcaption>
                 </figure>
-                <button class="button cards__button">Learn more</button>
+                <button type="button" class="button cards__button">
+                  Learn more
+                </button>
               </li>
-              <li class="cards__list-item">
+              <li class="cards__item cards__item_inner-page_hidden">
                 <figure class="cards__figure">
                   <img
                     src="../../assets/images/freddie.png"
@@ -145,7 +175,9 @@
                   />
                   <figcaption class="cards__caption">Freddie</figcaption>
                 </figure>
-                <button class="button cards__button">Learn more</button>
+                <button type="button" class="button cards__button">
+                  Learn more
+                </button>
               </li>
             </ul>
             <ul class="list slider__pagination">
@@ -164,17 +196,26 @@
                 </button>
               </li>
               <li class="slider__pagination-item">
-                <button class="button slider__button slider__button_active">
+                <button
+                  type="button"
+                  class="button slider__button slider__button_active"
+                >
                   1
                 </button>
               </li>
               <li class="slider__pagination-item">
-                <button class="button slider__button slider__button_next">
+                <button
+                  type="button"
+                  class="button slider__button slider__button_next"
+                >
                   &gt;
                 </button>
               </li>
               <li class="slider__pagination-item">
-                <button class="button slider__button slider__button_next">
+                <button
+                  type="button"
+                  class="button slider__button slider__button_next"
+                >
                   &gt;&gt;
                 </button>
               </li>
@@ -183,12 +224,10 @@
         </section>
       </main>
       <footer id="contacts" class="footer common-width">
-        <div class="footer__contacts">
-          <h3 class="title footer__title">
-            For questions <br />and suggestions
-          </h3>
-          <ul class="list footer__contacts-list">
-            <li class="footer__contacts-list-item">
+        <div class="footer__columns">
+          <h3 class="title footer__title">For questions and suggestions</h3>
+          <ul class="list footer__list footer__list_contacts">
+            <li class="footer__list-item">
               <svg class="icon icon_m icon__contacts">
                 <use xlink:href="../../assets/svg/sprite.svg#icon-email"></use>
               </svg>
@@ -196,7 +235,7 @@
                 email@shelter.com
               </a>
             </li>
-            <li class="footer__contacts-list-item">
+            <li class="footer__list-item">
               <svg class="icon icon_m icon__contacts">
                 <use xlink:href="../../assets/svg/sprite.svg#phone"></use>
               </svg>
@@ -206,13 +245,10 @@
             </li>
           </ul>
         </div>
-        <div class="footer__contacts">
-          <h3 class="title footer__title">
-            We are waiting<br />
-            for your visit
-          </h3>
-          <ul class="list footer__contacts-list">
-            <li class="footer__contacts-list-item">
+        <div class="footer__columns">
+          <h3 class="title footer__title">We are waiting for your visit</h3>
+          <ul class="list footer__list footer__list_addresses">
+            <li class="footer__list-item">
               <svg class="icon icon_s icon__contacts">
                 <use xlink:href="../../assets/svg/sprite.svg#icon-marker"></use>
               </svg>
@@ -224,7 +260,7 @@
                 1 Central Street, Boston<br />(entrance from the store)
               </a>
             </li>
-            <li class="footer__contacts-list-item">
+            <li class="footer__list-item">
               <svg class="icon icon_s icon__contacts">
                 <use xlink:href="../../assets/svg/sprite.svg#icon-marker"></use>
               </svg>
@@ -241,6 +277,6 @@
         <div class="footer__image"></div>
       </footer>
     </div>
-    <script src="../../pages/main/script.js"></script>
+    <script src="../../pages/index.js"></script>
   </body>
 </html>
