@@ -841,8 +841,9 @@ html {
   gap: 55px 120px;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1279px) {
   .help__list {
+    max-width: 900px;
     display: -ms-grid;
     display: grid;
     gap: 55px 60px;
