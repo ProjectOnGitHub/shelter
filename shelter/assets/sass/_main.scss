@@ -150,7 +150,7 @@ html {
     grid-template-areas: "logo navigation";
     grid-template-columns: max-content 1fr;
 
-    @media screen and (max-width: 1080px) {
+    @media screen and (max-width: 1279.2px) {
       height: 120px;
     }
     @media screen and (max-width: 767.2px) {
@@ -349,7 +349,7 @@ html {
   padding-bottom: 0;
 
   @include flexible();
-  @media screen and (max-width: 960px) {
+  @media screen and (max-width: 1279.2px) {
     display: grid;
 
     padding-top: 30px;
@@ -382,7 +382,7 @@ html {
 
     gap: 42px;
     @include flexible();
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 1279.2px) {
       justify-content: center;
 
       margin: 0;
@@ -420,16 +420,13 @@ html {
 
     background: url(../images/start-screen-puppy.png) no-repeat;
     background-size: cover;
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 1279.2px) {
       width: 569px;
       height: 593px;
 
       justify-self: right;
     }
-    @media screen and (max-width: 1080px) {
-      width: 450px;
-      height: 469px;
-    }
+
     @media screen and (max-width: 960px) {
       width: 569px;
       height: 593px;
@@ -451,7 +448,7 @@ html {
   }
   &__button {
     max-width: 207px;
-    @media screen and (max-width: 1080px) {
+    @media screen and (max-width: 1279.2px) {
       align-self: center;
     }
   }
