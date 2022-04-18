@@ -855,7 +855,7 @@ html {
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 767.2px) {
   .help__list {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
@@ -1089,10 +1089,11 @@ html {
   }
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 767.2px) {
   .footer {
     padding-right: 10px;
     padding-left: 10px;
+    max-width: 400px;
     gap: 40px;
   }
 }
@@ -1117,7 +1118,7 @@ html {
   }
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 767.2px) {
   .footer__columns {
     gap: 40px;
     height: auto;
