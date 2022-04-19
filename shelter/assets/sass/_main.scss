@@ -779,7 +779,7 @@ html {
     @media screen and (max-width: 960px) {
       max-width: 380px;
     }
-    @media screen and (max-width: 576px) {
+    @media screen and (max-width: 767.2px) {
       justify-items: center;
     }
   }
@@ -855,7 +855,7 @@ html {
     color: $color-dark-m;
 
     font: italic normal 12px/1.5 "Arial", sans-serif;
-    @media screen and (max-width: 576px) {
+    @media screen and (max-width: 767.2px) {
       text-align: justify;
     }
   }

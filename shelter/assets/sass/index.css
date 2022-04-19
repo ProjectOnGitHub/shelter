@@ -979,7 +979,7 @@ html {
   }
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 767.2px) {
   .donation__info {
     justify-items: center;
   }
@@ -1074,7 +1074,7 @@ html {
   font: italic normal 12px/1.5 "Arial", sans-serif;
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 767.2px) {
   .donation__text {
     text-align: justify;
   }
