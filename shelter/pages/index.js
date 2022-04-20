@@ -39,20 +39,22 @@ const addCard = (card) => {
 };
 
 const createCard = () => {
-  pets.forEach((item) => {
-    const card = new Card(
-      item.name,
-      item.img,
-      item.breed,
-      item.type,
-      item.description,
-      item.age,
-      item.inoculations,
-      item.diseases,
-      item.parasites,
-    );
+  pets.forEach((item, i) => {
+    if (i < 3) {
+      const card = new Card(
+        item.name,
+        item.img,
+        item.breed,
+        item.type,
+        item.description,
+        item.age,
+        item.inoculations,
+        item.diseases,
+        item.parasites,
+      );
 
-    return addCard(card);
+      return addCard(card);
+    }
   });
 };
 
@@ -61,16 +63,17 @@ createCard();
 function openPopup(e) {
   const currentElement = e.target.closest('.cards__item').querySelector('.cards__caption').textContent;
   addInfoToPopup(currentElement);
-
   popup.classList.add('popup_opened');
 }
 
-function closePopup() {
-  popup.classList.remove('popup_opened');
+function closePopup(e) {
+  if (e.target.classList.contains('popup') || e.target.classList.contains('popup__close-button')) {
+    popup.classList.remove('popup_opened');
+  }
 }
-
 popupButtonOpen.addEventListener('click', openPopup);
 popupButtonClose.addEventListener('click', closePopup);
+popup.addEventListener('click', closePopup);
 
 function addInfoToPopup(element) {
   pets.forEach((item) => {
