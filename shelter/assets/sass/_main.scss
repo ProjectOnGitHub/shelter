@@ -1011,7 +1011,7 @@ html {
     max-width: 500px;
     width: 100%;
     height: auto;
-    border-radius: 9px;
+    border-radius: 9px 0 0 9px;
     @media screen and (max-width: 1279.2px) {
       max-width: 350px;
     }
