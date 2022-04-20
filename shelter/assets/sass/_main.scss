@@ -969,8 +969,8 @@ html {
   height: 100vh;
   background: rgba($color-dark-3xl, 0.6);
   z-index: 2;
-  //visibility: hidden;
-  //opacity: 0;
+  visibility: hidden;
+  opacity: 0;
   transition: visibility 0.5s, opacity 0.5s ease-in-out;
   &__container {
     font: normal 15px/1.1 "Georgia", serif;
@@ -1079,5 +1079,9 @@ html {
   &__list-item:before {
     content: "•";
     color: $color-primary;
+  }
+  &_opened {
+    visibility: visible;
+    opacity: 1;
   }
 }

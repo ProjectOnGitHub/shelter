@@ -1,6 +1,15 @@
-import pets from '../../assets/utils/pets.js';
+import Card from './Card.js';
+import pets from '../assets/utils/pets.js';
 
-console.log(pets);
+// import Popup from './Popup.js';
+
+// const url = '../../assets/utils/pets.json';
+
+const popup = document.querySelector('.popup');
+const popupButtonOpen = document.querySelector('.cards');
+
+const popupButtonClose = document.querySelector('.popup__close-button');
+
 const menu = document.querySelector('.header__menu');
 const menuButton = document.querySelector('.header__menu-button');
 
@@ -22,36 +31,62 @@ const closeMenu = (e) => {
 menuButton.addEventListener('click', toggleMenuButton);
 menu.addEventListener('click', closeMenu);
 
-const addCards = () => {
+// const pets = [];
+
+const addCard = (card) => {
+  const cardElement = card.generateCard();
+  document.querySelector('.cards').append(cardElement);
+};
+
+const createCard = () => {
   pets.forEach((item) => {
-    const card = new Card(item.name, item.img);
-    const cardElement = card.generateCard();
-    document.querySelector('.cards').append(cardElement);
+    const card = new Card(
+      item.name,
+      item.img,
+      item.breed,
+      item.type,
+      item.description,
+      item.age,
+      item.inoculations,
+      item.diseases,
+      item.parasites,
+    );
+
+    return addCard(card);
   });
 };
 
-class Card {
-  constructor(name, img) {
-    this.name = name;
-    this.img = img;
-  }
+createCard();
 
-  getTemplate() {
-    const cardElement = document
-      .querySelector('.cards__template')
-      .content
-      .querySelector('.cards__item')
-      .cloneNode(true);
-    return cardElement;
-  }
+function openPopup(e) {
+  const currentElement = e.target.closest('.cards__item').querySelector('.cards__caption').textContent;
+  addInfoToPopup(currentElement);
 
-  generateCard() {
-    this.element = this.getTemplate();
-    this.element.querySelector('.cards__image').src = this.img;
-    this.element.querySelector('.cards__image').alt = this.name;
-    this.element.querySelector('.cards__caption').textContent = this.name;
-    return this.element;
-  }
+  popup.classList.add('popup_opened');
 }
 
-addCards();
+function closePopup() {
+  popup.classList.remove('popup_opened');
+}
+
+popupButtonOpen.addEventListener('click', openPopup);
+popupButtonClose.addEventListener('click', closePopup);
+
+function addInfoToPopup(element) {
+  pets.forEach((item) => {
+    if (element === item.name) {
+      const card = new Card(
+        item.name,
+        item.img,
+        item.breed,
+        item.type,
+        item.description,
+        item.age,
+        item.inoculations,
+        item.diseases,
+        item.parasites,
+      );
+      return card.addInfo();
+    }
+  });
+}
