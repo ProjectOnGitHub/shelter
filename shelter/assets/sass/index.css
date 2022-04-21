@@ -1233,12 +1233,24 @@ html {
           justify-content: center;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background: rgba(41, 41, 41, 0.6);
   z-index: 2;
   visibility: hidden;
   opacity: 0;
+  cursor: pointer;
+}
+
+.popup_opened {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: visibility 0.5s, opacity 0.5s ease-in-out;
+  transition: visibility 0.5s, opacity 0.5s ease-in-out;
+}
+
+.popup:hover {
+  background: rgba(41, 41, 41, 0.8);
   -webkit-transition: visibility 0.5s, opacity 0.5s ease-in-out;
   transition: visibility 0.5s, opacity 0.5s ease-in-out;
 }
@@ -1398,11 +1410,6 @@ html {
 .popup__list-item:before {
   content: "•";
   color: #f1cdb3;
-}
-
-.popup_opened {
-  visibility: visible;
-  opacity: 1;
 }
 
 .header_theme_light {

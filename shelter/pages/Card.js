@@ -36,6 +36,7 @@ export default class Card {
     this.popup.querySelector('.popup__subtitle_type').textContent = this.type;
     this.popup.querySelector('.popup__subtitle_breed').textContent = this.breed;
     this.popup.querySelector('.popup__text').textContent = this.description;
+    this.popup.querySelector('.popup__list-item_value_age').textContent = this.age;
     this.popup.querySelector('.popup__list-item_value_inoculations').textContent = this.inoculations;
     this.popup.querySelector('.popup__list-item_value_diseases').textContent = this.diseases;
     this.popup.querySelector('.popup__list-item_value_parasites').textContent = this.parasites;

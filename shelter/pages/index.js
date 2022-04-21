@@ -67,7 +67,8 @@ function openPopup(e) {
 }
 
 function closePopup(e) {
-  if (e.target.classList.contains('popup') || e.target.classList.contains('popup__close-button')) {
+  if (e.target.classList.contains('popup')
+    || e.currentTarget.classList.contains('popup__close-button')) {
     popup.classList.remove('popup_opened');
   }
 }
