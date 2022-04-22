@@ -79,6 +79,8 @@
   grid-area: list;
   gap: 30px 40px;
   justify-items: center;
+  height: 100%;
+  max-width: 1200px;
 }
 
 @media screen and (max-width: 1279.2px) {

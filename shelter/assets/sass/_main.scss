@@ -554,6 +554,20 @@ html {
   @media screen and (max-width: 576px) {
     gap: 20px 0;
   }
+  &__container {
+    overflow: hidden;
+    max-width: 990px;
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    @media screen and (max-width: 1279.2px) {
+      max-width: 800px;
+    }
+    @media screen and (max-width: 767.2px) {
+      grid-area: list;
+      max-width: 270px;
+    }
+  }
   &__button {
     display: grid;
     align-content: center;
@@ -588,21 +602,59 @@ html {
   }
 }
 
-.cards {
-  justify-content: center;
+@keyframes move-next {
+  from {
+    opacity: 1;
+    left: 0;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    left: -990px;
+    transform: scale(0);
+  }
+}
 
-  gap: 90px;
+@keyframes move-prev {
+  from {
+    opacity: 1;
+    left: 0;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    left: 990px;
+    transform: scale(0);
+  }
+}
+
+.transition-next {
+  animation-name: move-next;
+  animation-duration: 0.5s;
+}
+.transition-prev {
+  animation-name: move-prev;
+  animation-duration: 0.5s;
+}
+
+.cards {
   grid-template-columns: repeat(auto-fill, 270px);
   grid-template-rows: repeat(auto-fill, 435px);
   @include gridable();
+  justify-content: start;
+  gap: 90px;
+  position: relative;
+  left: 0;
   justify-items: center;
+  max-width: 990px;
+  height: 435px;
   @media screen and (max-width: 1279.2px) {
     max-width: 800px;
     gap: 30px 40px;
+    max-width: 630px;
   }
   @media screen and (max-width: 767.2px) {
-    grid-area: list;
-    grid-template-columns: 1fr;
+    max-width: 270px;
   }
   &__item {
     display: grid;
