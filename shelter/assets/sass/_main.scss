@@ -1139,6 +1139,7 @@ html {
     opacity: 0;
     background: $color-dark-3xl;
     &_active {
+      cursor: pointer;
       right: 0;
       visibility: visible;
       opacity: 0.6;

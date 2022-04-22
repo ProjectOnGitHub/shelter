@@ -1516,6 +1516,7 @@ html {
     background: #292929;
   }
   .overlay_active {
+    cursor: pointer;
     right: 0;
     visibility: visible;
     opacity: 0.6;
