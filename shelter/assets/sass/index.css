@@ -838,8 +838,6 @@ html {
       -ms-flex-pack: start;
           justify-content: start;
   gap: 90px;
-  position: relative;
-  left: 0;
   justify-items: center;
   max-width: 990px;
   height: 435px;
