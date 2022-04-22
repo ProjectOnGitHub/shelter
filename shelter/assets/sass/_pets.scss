@@ -15,6 +15,7 @@
   @media screen and (max-width: 767.2px) {
     &__menu_theme_light {
       background-color: $color-light-xl;
+      z-index: 1;
     }
   }
   @media screen and (max-width: 767.2px) {

@@ -7,6 +7,7 @@ import pets from '../assets/utils/pets.js';
 
 const popup = document.querySelector('.popup');
 const cardsList = document.querySelector('.cards');
+const menuOverlay = document.querySelector('.overlay');
 
 const popupButtonClose = document.querySelector('.popup__close-button');
 
@@ -48,6 +49,7 @@ buttonNext.addEventListener('click', moveNextSlide);
 
 const toggleMenuButton = () => {
   menu.classList.toggle('header__menu_opened');
+  menuOverlay.classList.toggle('overlay_active');
   menuButton.classList.contains('header__menu-button_theme_light')
     ? menuButton.classList.toggle('header__menu-button_theme_light_opened')
     : menuButton.classList.toggle('header__menu-button_opened');
