@@ -109,11 +109,11 @@ function getRandomCard() {
   } else if (window.matchMedia('(min-width: 768px)').matches && window.matchMedia('(max-width: 1279.2px)').matches) {
     currentPage.includes('main')
       ? counter = -2
-      : counter = 1;
+      : counter = -6;
   } else {
     currentPage.includes('main')
       ? counter = -1
-      : counter = 2;
+      : counter = -3;
   }
   const arr = [0, 1, 2, 3, 4, 5, 6, 7]
     .sort(() => 0.5 - Math.random())

@@ -1618,14 +1618,15 @@ html {
 }
 
 @media screen and (max-width: 1279.2px) {
-  .cards__item_inner-page_hidden {
-    display: none;
+  .cards_inner-page {
+    max-width: 580px;
+    gap: 40px;
   }
 }
 
-@media screen and (max-width: 1279.2px) and (max-width: 767.2px) {
-  .cards__item_inner-page_hidden_767 {
-    display: none;
+@media screen and (max-width: 767.2px) {
+  .cards_inner-page {
+    max-width: 270px;
   }
 }
 
