@@ -27,6 +27,10 @@ html {
   scroll-behavior: smooth;
 }
 
+.scroll-lock {
+  overflow: hidden;
+}
+
 .root {
   box-sizing: border-box;
   height: 100%;

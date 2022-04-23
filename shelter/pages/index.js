@@ -165,6 +165,7 @@ const menuOverlay = document.querySelector('.overlay');
 const toggleMenuButton = () => {
   menu.classList.toggle('header__menu_opened');
   menuOverlay.classList.toggle('overlay_active');
+  document.body.classList.toggle('scroll-lock');
   menuButton.classList.contains('header__menu-button_theme_light')
     ? menuButton.classList.toggle('header__menu-button_theme_light_opened')
     : menuButton.classList.toggle('header__menu-button_opened');
@@ -176,6 +177,7 @@ const closeMenu = (e) => {
     menuButton.classList.remove('header__menu-button_opened');
     menu.classList.remove('header__menu_opened');
     menuOverlay.classList.remove('overlay_active');
+    document.body.classList.remove('scroll-lock');
   }
 };
 
@@ -208,6 +210,7 @@ const addInfoToPopup = (element) => {
 
 const openPopup = (e) => {
   const currentElement = e.target.closest('.cards__item').querySelector('.cards__caption').textContent;
+  document.body.classList.add('scroll-lock');
   addInfoToPopup(currentElement);
   popup.classList.add('popup_opened');
 };
@@ -216,6 +219,7 @@ const closePopup = (e) => {
   if (e.target.classList.contains('popup')
     || e.currentTarget.classList.contains('popup__close-button')) {
     popup.classList.remove('popup_opened');
+    document.body.classList.remove('scroll-lock');
   }
 };
 cardsList.addEventListener('click', openPopup);
