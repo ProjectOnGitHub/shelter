@@ -71,7 +71,6 @@ getRandomCard();
 
 // Slider and pagination
 const cardsList = document.querySelector('.cards');
-
 const buttonPrev = document.querySelector('.slider__button_prev');
 const buttonNext = document.querySelector('.slider__button_next');
 const buttonStart = document.querySelector('.slider__button_start');
@@ -81,9 +80,13 @@ const disablePage = () => {
   if (currentPageNumber === fullArr.length) {
     buttonNext.classList.add('slider__button_disabled');
     buttonEnd.classList.add('slider__button_disabled');
+    buttonPrev.classList.remove('slider__button_disabled');
+    buttonStart.classList.remove('slider__button_disabled');
   } else if (currentPageNumber <= 1 && currentPageNumber !== fullArr.length) {
     buttonPrev.classList.add('slider__button_disabled');
     buttonStart.classList.add('slider__button_disabled');
+    buttonNext.classList.remove('slider__button_disabled');
+    buttonEnd.classList.remove('slider__button_disabled');
   } else if (currentPageNumber > 1 && currentPageNumber !== fullArr.length) {
     buttonPrev.classList.remove('slider__button_disabled');
     buttonStart.classList.remove('slider__button_disabled');
@@ -92,14 +95,20 @@ const disablePage = () => {
   }
 };
 
+const removeListeners = () => {
+  buttonStart.removeEventListener('click', moveStart);
+  buttonEnd.removeEventListener('click', moveEnd);
+  buttonPrev.removeEventListener('click', movePrevSlide);
+  buttonNext.removeEventListener('click', moveNextSlide);
+};
+
 const movePrevSlide = () => {
   currentPageNumber -= 1;
   disablePage();
   currentPage.textContent = currentPageNumber;
   createCard();
   cardsList.classList.add('transition-prev');
-  buttonPrev.removeEventListener('click', movePrevSlide);
-  buttonNext.removeEventListener('click', moveNextSlide);
+  removeListeners();
 };
 
 const moveNextSlide = () => {
@@ -108,24 +117,45 @@ const moveNextSlide = () => {
   currentPage.textContent = currentPageNumber;
   createCard();
   cardsList.classList.add('transition-next');
-  buttonPrev.removeEventListener('click', movePrevSlide);
-  buttonNext.removeEventListener('click', moveNextSlide);
+  removeListeners();
+};
+
+const moveStart = () => {
+  currentPageNumber = 1;
+  disablePage();
+  currentPage.textContent = currentPageNumber;
+  createCard();
+  cardsList.classList.add('transition-prev');
+  removeListeners();
+};
+
+const moveEnd = () => {
+  currentPageNumber = fullArr.length;
+  disablePage();
+  currentPage.textContent = currentPageNumber;
+  createCard();
+  cardsList.classList.add('transition-next');
+  removeListeners();
 };
 
 const removeTransitionPrev = () => {
   cardsList.classList.remove('transition-prev');
   buttonPrev.addEventListener('click', movePrevSlide);
+  buttonStart.addEventListener('click', moveStart);
 };
+
 const removeTransitionNext = () => {
   cardsList.classList.remove('transition-next');
   buttonNext.addEventListener('click', moveNextSlide);
+  buttonEnd.addEventListener('click', moveEnd);
 };
 
 cardsList.addEventListener('animationend', removeTransitionNext);
 cardsList.addEventListener('animationend', removeTransitionPrev);
-
 buttonPrev.addEventListener('click', movePrevSlide);
 buttonNext.addEventListener('click', moveNextSlide);
+buttonStart.addEventListener('click', moveStart);
+buttonEnd.addEventListener('click', moveEnd);
 
 // Burger menu
 const menu = document.querySelector('.header__menu');
