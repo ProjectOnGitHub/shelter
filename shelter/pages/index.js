@@ -2,7 +2,7 @@ import Card from './Card.js';
 import pets from '../assets/utils/pets.js';
 
 // Cards
-
+const currentPage = document.querySelector('.slider__button_active');
 const addCard = (card) => {
   const cardElement = card.generateCard();
   document.querySelector('.cards').append(cardElement);
@@ -12,10 +12,12 @@ const removeCards = () => {
   const cards = document.querySelectorAll('.cards__item');
   cards.forEach((item) => item.remove());
 };
+const fullArr = [];
+let currentPageNumber = 1;
 
-const createCard = (arr) => {
+const createCard = () => {
   removeCards();
-  arr.forEach((index) => {
+  fullArr[currentPageNumber - 1].forEach((index) => {
     pets.forEach((item, i) => {
       if (i === index) {
         const card = new Card(
@@ -35,28 +37,34 @@ const createCard = (arr) => {
   });
 };
 
+function sliceIntoChunks(array, chunkSize) {
+  for (let i = 0; i < array.length; i += chunkSize) {
+    const chunk = array.slice(i, i + chunkSize);
+    fullArr.push(chunk.sort(() => 0.5 - Math.random()));
+  }
+  createCard();
+}
+
+function generateArr(counter) {
+  const arr = [];
+  for (let i = 0; i < 6; i++) {
+    const item = [0, 1, 2, 3, 4, 5, 6, 7];
+    arr.push(...item);
+  }
+  sliceIntoChunks(arr, counter);
+}
+
 const getRandomCard = () => {
   let counter;
-
-  const currentPage = document.location.pathname;
+  const currentPath = document.location.pathname;
   if (window.matchMedia('(min-width: 1280px)').matches) {
-    currentPage.includes('main')
-      ? counter = -3
-      : counter = 0;
+    currentPath.includes('main') ? counter = 3 : counter = 8;
   } else if (window.matchMedia('(min-width: 768px)').matches && window.matchMedia('(max-width: 1279.2px)').matches) {
-    currentPage.includes('main')
-      ? counter = -2
-      : counter = -6;
+    currentPath.includes('main') ? counter = 2 : counter = 6;
   } else {
-    currentPage.includes('main')
-      ? counter = -1
-      : counter = -3;
+    currentPath.includes('main') ? counter = 1 : counter = 3;
   }
-  const arr = [0, 1, 2, 3, 4, 5, 6, 7]
-    .sort(() => 0.5 - Math.random())
-    .slice(counter).sort();
-
-  createCard(arr);
+  return generateArr(counter);
 };
 
 getRandomCard();
@@ -66,16 +74,39 @@ const cardsList = document.querySelector('.cards');
 
 const buttonPrev = document.querySelector('.slider__button_prev');
 const buttonNext = document.querySelector('.slider__button_next');
+const buttonStart = document.querySelector('.slider__button_start');
+const buttonEnd = document.querySelector('.slider__button_end');
+
+const disablePage = () => {
+  if (currentPageNumber === fullArr.length) {
+    buttonNext.classList.add('slider__button_disabled');
+    buttonEnd.classList.add('slider__button_disabled');
+  } else if (currentPageNumber <= 1 && currentPageNumber !== fullArr.length) {
+    buttonPrev.classList.add('slider__button_disabled');
+    buttonStart.classList.add('slider__button_disabled');
+  } else if (currentPageNumber > 1 && currentPageNumber !== fullArr.length) {
+    buttonPrev.classList.remove('slider__button_disabled');
+    buttonStart.classList.remove('slider__button_disabled');
+    buttonNext.classList.remove('slider__button_disabled');
+    buttonEnd.classList.remove('slider__button_disabled');
+  }
+};
 
 const movePrevSlide = () => {
-  getRandomCard();
+  currentPageNumber -= 1;
+  disablePage();
+  currentPage.textContent = currentPageNumber;
+  createCard();
   cardsList.classList.add('transition-prev');
   buttonPrev.removeEventListener('click', movePrevSlide);
   buttonNext.removeEventListener('click', moveNextSlide);
 };
 
 const moveNextSlide = () => {
-  getRandomCard();
+  currentPageNumber += 1;
+  disablePage();
+  currentPage.textContent = currentPageNumber;
+  createCard();
   cardsList.classList.add('transition-next');
   buttonPrev.removeEventListener('click', movePrevSlide);
   buttonNext.removeEventListener('click', moveNextSlide);
@@ -91,7 +122,6 @@ const removeTransitionNext = () => {
 };
 
 cardsList.addEventListener('animationend', removeTransitionNext);
-
 cardsList.addEventListener('animationend', removeTransitionPrev);
 
 buttonPrev.addEventListener('click', movePrevSlide);
