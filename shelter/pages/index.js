@@ -1,6 +1,8 @@
 import Card from './Card.js';
 import pets from '../assets/utils/pets.js';
 
+const currentPath = document.location.pathname;
+
 // Cards
 const currentPage = document.querySelector('.slider__button_active');
 const addCard = (card) => {
@@ -56,7 +58,6 @@ function generateArr(counter) {
 
 const getRandomCard = () => {
   let counter;
-  const currentPath = document.location.pathname;
   if (window.matchMedia('(min-width: 1280px)').matches) {
     currentPath.includes('main') ? counter = 3 : counter = 8;
   } else if (window.matchMedia('(min-width: 768px)').matches && window.matchMedia('(max-width: 1279.2px)').matches) {
@@ -77,32 +78,36 @@ const buttonStart = document.querySelector('.slider__button_start');
 const buttonEnd = document.querySelector('.slider__button_end');
 
 const disablePage = () => {
-  if (currentPageNumber === fullArr.length) {
-    buttonNext.classList.add('slider__button_disabled');
-    buttonEnd.classList.add('slider__button_disabled');
+  if (currentPageNumber === fullArr.length && currentPath.includes('pets')) {
     buttonPrev.classList.remove('slider__button_disabled');
+    buttonNext.classList.add('slider__button_disabled');
     buttonStart.classList.remove('slider__button_disabled');
+    buttonEnd.classList.add('slider__button_disabled');
   } else if (currentPageNumber <= 1 && currentPageNumber !== fullArr.length) {
     buttonPrev.classList.add('slider__button_disabled');
-    buttonStart.classList.add('slider__button_disabled');
     buttonNext.classList.remove('slider__button_disabled');
+    buttonStart.classList.add('slider__button_disabled');
     buttonEnd.classList.remove('slider__button_disabled');
   } else if (currentPageNumber > 1 && currentPageNumber !== fullArr.length) {
     buttonPrev.classList.remove('slider__button_disabled');
-    buttonStart.classList.remove('slider__button_disabled');
     buttonNext.classList.remove('slider__button_disabled');
+    buttonStart.classList.remove('slider__button_disabled');
     buttonEnd.classList.remove('slider__button_disabled');
   }
 };
 
 const removeListeners = () => {
+  if (currentPath.includes('main')) {
+    buttonPrev.removeEventListener('click', movePrevPage);
+    buttonNext.removeEventListener('click', moveNextPage);
+  }
+  buttonPrev.removeEventListener('click', movePrevPage);
+  buttonNext.removeEventListener('click', moveNextPage);
   buttonStart.removeEventListener('click', moveStart);
   buttonEnd.removeEventListener('click', moveEnd);
-  buttonPrev.removeEventListener('click', movePrevSlide);
-  buttonNext.removeEventListener('click', moveNextSlide);
 };
 
-const movePrevSlide = () => {
+const movePrevPage = () => {
   currentPageNumber -= 1;
   disablePage();
   currentPage.textContent = currentPageNumber;
@@ -111,13 +116,40 @@ const movePrevSlide = () => {
   removeListeners();
 };
 
-const moveNextSlide = () => {
+const moveNextPage = () => {
   currentPageNumber += 1;
   disablePage();
   currentPage.textContent = currentPageNumber;
   createCard();
   cardsList.classList.add('transition-next');
   removeListeners();
+};
+
+const movePrevSlide = () => {
+  currentPageNumber -= 1;
+  if (currentPageNumber === 0) {
+    console.log(`предыдущая страница ${currentPageNumber}`);
+    currentPageNumber = fullArr.length + 1;
+    currentPageNumber -= 1;
+    console.log(currentPageNumber);
+  }
+  console.log(currentPageNumber);
+  createCard();
+  cardsList.classList.add('transition-prev');
+};
+
+const moveNextSlide = () => {
+  currentPageNumber += 1;
+
+  if (currentPageNumber >= fullArr.length) {
+    currentPageNumber = 0;
+    currentPageNumber += 1;
+    console.log(currentPageNumber);
+  }
+  console.log(currentPageNumber);
+
+  createCard();
+  cardsList.classList.add('transition-next');
 };
 
 const moveStart = () => {
@@ -140,22 +172,33 @@ const moveEnd = () => {
 
 const removeTransitionPrev = () => {
   cardsList.classList.remove('transition-prev');
-  buttonPrev.addEventListener('click', movePrevSlide);
-  buttonStart.addEventListener('click', moveStart);
+  currentPath.includes('main')
+    ? buttonPrev.addEventListener('click', movePrevSlide)
+    : (buttonPrev.addEventListener('click', movePrevPage),
+      buttonStart.addEventListener('click', moveStart));
 };
 
 const removeTransitionNext = () => {
   cardsList.classList.remove('transition-next');
-  buttonNext.addEventListener('click', moveNextSlide);
-  buttonEnd.addEventListener('click', moveEnd);
+  currentPath.includes('main')
+    ? buttonNext.addEventListener('click', moveNextSlide)
+    : (buttonNext.addEventListener('click', moveNextPage),
+      buttonEnd.addEventListener('click', moveEnd));
 };
 
 cardsList.addEventListener('animationend', removeTransitionNext);
 cardsList.addEventListener('animationend', removeTransitionPrev);
-buttonPrev.addEventListener('click', movePrevSlide);
-buttonNext.addEventListener('click', moveNextSlide);
-buttonStart.addEventListener('click', moveStart);
-buttonEnd.addEventListener('click', moveEnd);
+buttonPrev.addEventListener('click', currentPath.includes('main') ? movePrevSlide : movePrevPage);
+buttonNext.addEventListener('click', currentPath.includes('main') ? moveNextSlide : moveNextPage);
+
+const setEventListeners = () => {
+  if (currentPath.includes('pets')) {
+    buttonStart.addEventListener('click', moveStart);
+    buttonEnd.addEventListener('click', moveEnd);
+  }
+};
+
+setEventListeners();
 
 // Burger menu
 const menu = document.querySelector('.header__menu');
