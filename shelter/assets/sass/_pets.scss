@@ -15,6 +15,7 @@
   @media screen and (max-width: 767.2px) {
     &__menu_theme_light {
       background-color: $color-light-xl;
+      z-index: 1;
     }
   }
   @media screen and (max-width: 767.2px) {
@@ -79,16 +80,14 @@
   grid-area: list;
   gap: 30px 40px;
   justify-items: center;
-}
-
-@media screen and (max-width: 1279.2px) {
-  .cards__item_inner-page_hidden {
-    display: none;
-    @media screen and (max-width: 767.2px) {
-      &_767 {
-        display: none;
-      }
-    }
+  height: 100%;
+  max-width: 1200px;
+  @media screen and (max-width: 1279.2px) {
+    max-width: 580px;
+    gap: 40px;
+  }
+  @media screen and (max-width: 767.2px) {
+    max-width: 270px;
   }
 }
 

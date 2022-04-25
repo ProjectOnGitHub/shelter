@@ -26,6 +26,8 @@
               class="header__menu-button header__menu-button_theme_light"
               aria-label="mobile menu"
             ></button>
+            <div class="overlay"></div>
+
             <ul class="header__menu list header__menu_theme_light">
               <a href="../main" class="link header__logo header__logo_menu">
                 <h1 class="header__title header__title_theme_light">
@@ -74,116 +76,11 @@
             are looking for a house
           </h3>
           <div class="slider slider_inner-page common-width">
-            <ul class="list cards cards_inner-page">
-              <li class="cards__item">
-                <figure class="cards__figure">
-                  <img
-                    src="../../assets/images/katrine.png"
-                    alt="Katrine"
-                    class="cards__image"
-                  />
-                  <figcaption class="cards__caption">Katrine</figcaption>
-                </figure>
-                <button type="button" class="button cards__button">
-                  Learn more
-                </button>
-              </li>
-              <li class="cards__item">
-                <figure class="cards__figure">
-                  <img
-                    src="../../assets/images/jennifer.png"
-                    alt="Jennifer"
-                    class="cards__image"
-                  />
-                  <figcaption class="cards__caption">Jennifer</figcaption>
-                </figure>
-                <button type="button" class="button cards__button">
-                  Learn more
-                </button>
-              </li>
-              <li class="cards__item">
-                <figure class="cards__figure">
-                  <img
-                    src="../../assets/images/woody.png"
-                    alt="Woddy"
-                    class="cards__image"
-                  />
-                  <figcaption class="cards__caption">Woddy</figcaption>
-                </figure>
-                <button type="button" class="button cards__button">
-                  Learn more
-                </button>
-              </li>
-              <li class="cards__item cards__item_inner-page_hidden_767">
-                <figure class="cards__figure">
-                  <img
-                    src="../../assets/images/sophia.png"
-                    alt="Sophia"
-                    class="cards__image"
-                  />
-                  <figcaption class="cards__caption">Sophia</figcaption>
-                </figure>
-                <button type="button" class="button cards__button">
-                  Learn more
-                </button>
-              </li>
-              <li class="cards__item cards__item_inner-page_hidden_767">
-                <figure class="cards__figure">
-                  <img
-                    src="../../assets/images/timmy.png"
-                    alt="Timmy"
-                    class="cards__image"
-                  />
-                  <figcaption class="cards__caption">Timmy</figcaption>
-                </figure>
-                <button type="button" class="button cards__button">
-                  Learn more
-                </button>
-              </li>
-              <li class="cards__item cards__item_inner-page_hidden_767">
-                <figure class="cards__figure">
-                  <img
-                    src="../../assets/images/charly.png"
-                    alt="Charly"
-                    class="cards__image"
-                  />
-                  <figcaption class="cards__caption">Charly</figcaption>
-                </figure>
-                <button type="button" class="button cards__button">
-                  Learn more
-                </button>
-              </li>
-              <li class="cards__item cards__item_inner-page_hidden">
-                <figure class="cards__figure">
-                  <img
-                    src="../../assets/images/scarlett.png"
-                    alt="Scarlett"
-                    class="cards__image"
-                  />
-                  <figcaption class="cards__caption">Scarlett</figcaption>
-                </figure>
-                <button type="button" class="button cards__button">
-                  Learn more
-                </button>
-              </li>
-              <li class="cards__item cards__item_inner-page_hidden">
-                <figure class="cards__figure">
-                  <img
-                    src="../../assets/images/freddie.png"
-                    alt="Freddie"
-                    class="cards__image"
-                  />
-                  <figcaption class="cards__caption">Freddie</figcaption>
-                </figure>
-                <button type="button" class="button cards__button">
-                  Learn more
-                </button>
-              </li>
-            </ul>
+            <ul class="list cards cards_inner-page"></ul>
             <ul class="list slider__pagination">
               <li class="slider__pagination-item">
                 <button
-                  class="button slider__button slider__button_prev slider__button_disabled"
+                  class="button slider__button slider__button_start slider__button_disabled"
                 >
                   &lt;&lt;
                 </button>
@@ -214,7 +111,7 @@
               <li class="slider__pagination-item">
                 <button
                   type="button"
-                  class="button slider__button slider__button_next"
+                  class="button slider__button slider__button_end"
                 >
                   &gt;&gt;
                 </button>
@@ -276,7 +173,65 @@
         </div>
         <div class="footer__image"></div>
       </footer>
+      <section class="popup">
+        <div class="popup__container">
+          <button
+            type="button"
+            class="button popup__close-button"
+            aria-label="Закрыть"
+          >
+            <svg class="icon popup__icon">
+              <use xlink:href="../../assets/svg/sprite.svg#close"></use>
+            </svg>
+          </button>
+          <img src="" alt="" class="popup__image" />
+          <article class="popup__article">
+            <h3 class="title popup__title"></h3>
+            <h4 class="popup__subtitle">
+              <span class="popup__subtitle_type"></span>
+              &nbsp;-&nbsp;
+              <span class="popup__subtitle_breed"></span>
+            </h4>
+            <p class="popup__text"></p>
+            <ul class="list popup__list">
+              <li class="popup__list-item">
+                Age:
+                <span
+                  class="popup__list-item_value popup__list-item_value_age"
+                ></span>
+              </li>
+              <li class="popup__list-item">
+                Inoculations:
+                <span
+                  class="popup__list-item_value popup__list-item_value_inoculations"
+                ></span>
+              </li>
+              <li class="popup__list-item">
+                Diseases:
+                <span
+                  class="popup__list-item_value popup__list-item_value_diseases"
+                ></span>
+              </li>
+              <li class="popup__list-item">
+                Parasites:
+                <span
+                  class="popup__list-item_value popup__list-item_value_parasites"
+                ></span>
+              </li>
+            </ul>
+          </article>
+        </div>
+      </section>
+      <template class="cards__template">
+        <li class="cards__item">
+          <figure class="cards__figure">
+            <img src="" alt="" class="cards__image" />
+            <figcaption class="cards__caption"></figcaption>
+          </figure>
+          <button type="button" class="button cards__button">Learn more</button>
+        </li>
+      </template>
     </div>
-    <script src="../../pages/index.js"></script>
+    <script type="module" src="../../pages/index.js"></script>
   </body>
 </html>
