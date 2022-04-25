@@ -254,7 +254,7 @@ const openPopup = (e) => {
 };
 
 const closePopup = (e) => {
-  if (e.target.classList.contains('popup')
+  if (e.target.classList.contains('popup__overlay')
     || e.currentTarget.classList.contains('popup__close-button')) {
     popup.classList.remove('popup_opened');
     document.body.classList.remove('scroll-lock');
