@@ -96,11 +96,12 @@ const disablePage = () => {
   }
 };
 
-const removeListeners = () => {
-  if (currentPath.includes('main')) {
-    buttonPrev.removeEventListener('click', movePrevPage);
-    buttonNext.removeEventListener('click', moveNextPage);
-  }
+const removeSliderListeners = () => {
+  buttonPrev.removeEventListener('click', movePrevSlide);
+  buttonNext.removeEventListener('click', moveNextSlide);
+};
+
+const removePaginationListeners = () => {
   buttonPrev.removeEventListener('click', movePrevPage);
   buttonNext.removeEventListener('click', moveNextPage);
   buttonStart.removeEventListener('click', moveStart);
@@ -113,7 +114,7 @@ const movePrevPage = () => {
   currentPage.textContent = currentPageNumber;
   createCard();
   cardsList.classList.add('transition-prev');
-  removeListeners();
+  removePaginationListeners();
 };
 
 const moveNextPage = () => {
@@ -122,7 +123,7 @@ const moveNextPage = () => {
   currentPage.textContent = currentPageNumber;
   createCard();
   cardsList.classList.add('transition-next');
-  removeListeners();
+  removePaginationListeners();
 };
 
 const movePrevSlide = () => {
@@ -133,6 +134,7 @@ const movePrevSlide = () => {
   }
   createCard();
   cardsList.classList.add('transition-prev');
+  removeSliderListeners();
 };
 
 const moveNextSlide = () => {
@@ -145,6 +147,7 @@ const moveNextSlide = () => {
 
   createCard();
   cardsList.classList.add('transition-next');
+  removeSliderListeners();
 };
 
 const moveStart = () => {
@@ -153,7 +156,7 @@ const moveStart = () => {
   currentPage.textContent = currentPageNumber;
   createCard();
   cardsList.classList.add('transition-prev');
-  removeListeners();
+  removePaginationListeners();
 };
 
 const moveEnd = () => {
@@ -162,7 +165,7 @@ const moveEnd = () => {
   currentPage.textContent = currentPageNumber;
   createCard();
   cardsList.classList.add('transition-next');
-  removeListeners();
+  removePaginationListeners();
 };
 
 const removeTransitionPrev = () => {
