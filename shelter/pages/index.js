@@ -128,12 +128,9 @@ const moveNextPage = () => {
 const movePrevSlide = () => {
   currentPageNumber -= 1;
   if (currentPageNumber === 0) {
-    console.log(`предыдущая страница ${currentPageNumber}`);
     currentPageNumber = fullArr.length + 1;
     currentPageNumber -= 1;
-    console.log(currentPageNumber);
   }
-  console.log(currentPageNumber);
   createCard();
   cardsList.classList.add('transition-prev');
 };
@@ -144,9 +141,7 @@ const moveNextSlide = () => {
   if (currentPageNumber >= fullArr.length) {
     currentPageNumber = 0;
     currentPageNumber += 1;
-    console.log(currentPageNumber);
   }
-  console.log(currentPageNumber);
 
   createCard();
   cardsList.classList.add('transition-next');
