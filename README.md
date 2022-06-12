@@ -8,4 +8,4 @@
 - 768px <= width < 1280px;
 - 320px <= width < 768px.
 
-[Ссылка на сайт](https://projectongithub.github.io/shelter/)
+[Ссылка на сайт](https://projectongithub.github.io/shelter/pages/main/)
